@@ -1,0 +1,447 @@
+International Conference on Emerging Trends in Computational Physics, Applied Mathematics and Intelligent Systems (ETCPAMIS)
+Hybrid mode (Online and Offline Mode)
+15th and 16th April 2027
+SRM Institute of Science and Technology, Tiruchirappalli, Tamil Nadu, India
+
+Organiser:
+Dr. S. Kanaga Suba Raja
+Professor and Head
+Department of Computer Science and Engineering 
+SRM Institute of Science and Technology 
+Tiruchirappalli, Tamil Nadu, 621105, India
+
+About SRM Institute of Science and Technology: 
+SRM Institute of Science and Technology is one of India's leading multidisciplinary higher education institutions, recognized for its excellence in teaching, research, innovation, and industry engagement. Established with a vision to impart quality education and foster technological advancement, SRMIST offers a comprehensive range of undergraduate, postgraduate, doctoral, and post-doctoral programs across diverse disciplines, including Engineering and Technology, Management, Medicine and Health Sciences, Science and Humanities, Law, Agricultural Sciences, and Allied Health Sciences. In NIRF 2025, SRMIST achieved the 22nd rank in the Overall category and 11th among universities in India, demonstrating its strong commitment to quality higher education and research excellence.
+
+The institution has a strong academic ecosystem supported by highly qualified faculty members, state-of-the-art laboratories, modern research facilities, innovation centers, and extensive industry collaborations. SRMIST continuously promotes interdisciplinary research and entrepreneurship through partnerships with leading universities, research organizations, and industries across the globe. The university attracts students from all over India and numerous countries, creating a vibrant multicultural learning environment. With campuses located in Kattankulathur (Chennai), Ramapuram, Vadapalani, Tiruchirappalli, Modinagar, Sonepat, Amaravati, and Gangtok, SRMIST has established itself as a center of excellence for higher education and research. The institution consistently emphasizes outcome-based education, innovation-driven learning, global exposure, and societal impact, preparing graduates to become competent professionals, researchers, and leaders in their respective domains.
+
+About the Department of Computer Science and Engineering:
+The Department of Computer Science and Engineering at SRM Institute of Science and Technology, Tiruchirappalli, was established in 2021 with the vision of imparting quality education and fostering innovation in the field of computing. The department is committed to developing competent professionals through a curriculum that combines strong theoretical foundations with practical and industry-oriented learning. The department offers a vibrant academic environment supported by experienced faculty members, modern computing laboratories, advanced software tools, and state-of-the-art infrastructure. It actively promotes research and innovation in emerging areas such as Artificial Intelligence, Machine Learning, Data Science, Cyber Security, Cloud Computing, and the Internet of Things.
+
+To bridge the gap between academia and industry, the department collaborates with leading organizations through internships, workshops, expert talks, certification programs, and industry-driven projects. Students are encouraged to participate in research activities, hackathons, technical competitions, and entrepreneurial initiatives. The department strives to nurture technically skilled, ethically responsible, and globally competent graduates capable of addressing real-world challenges and contributing to technological advancement. This version is professional, conference-ready, and fits comfortably into half a page of a conference brochure.
+
+Vision: 
+To emerge as a globally recognized center of excellence in Computer Science and Engineering by fostering innovative research, interdisciplinary scientific advancements, computational intelligence, and sustainable technological solutions that contribute to societal development, scientific discovery, and global academic excellence.
+
+Mission: 
+To promote excellence in Computer Science and Engineering education through interdisciplinary research, intelligent systems, scientific computing, innovation-driven learning, and industry collaboration while emphasizing ethical responsibility, sustainability, and societal impact.
+
+Objective of the Conference:
+The International Conference on Emerging Trends in Computational Physics, Applied Mathematics and Intelligent Systems (ETCPAMIS 2027) aims to provide a premier interdisciplinary platform for academicians, researchers, scientists, industry professionals, and students to present and discuss recent advancements, innovative methodologies, and emerging research trends in Computational Physics, Applied Mathematics, Scientific Computing, Artificial Intelligence, and Intelligent Systems.The conference seeks to foster collaboration among academia, research institutions, and industries by encouraging the exchange of novel ideas, scientific discoveries, computational techniques, and technological innovations that address real-world scientific and engineering challenges.
+The conference further aims to promote high-quality research in areas such as mathematical modelling, computational simulations, quantum computing, physics-informed artificial intelligence, intelligent automation, scientific data analytics, sustainable technologies, and interdisciplinary intelligent systems. Through keynote lectures, technical sessions, and scholarly interactions, ETCPAMIS 2027 aspires to contribute significantly to scientific advancement, technological innovation, and global research collaboration in emerging computational and intelligent technologies.
+
+Conference Scope: 
+The conference will focus on the emerging trends and interdisciplinary applications of Computational Physics, Applied Mathematics, Scientific Computing, and Intelligent Systems in addressing complex scientific, engineering, and technological challenges. It aims to provide a platform for researchers, scientists, academicians, and industry professionals to explore innovative computational models, mathematical frameworks, intelligent algorithms, and emerging technologies that accelerate scientific discovery and technological advancement. The conference serves as a premier interdisciplinary forum for presenting and discussing cutting-edge research, innovative methodologies, and practical applications in Computational Physics, Applied Mathematics, Artificial Intelligence, Quantum Computing, Scientific Simulations, and Intelligent Systems. The conference seeks to foster collaboration among academia, industry, and research organizations to address contemporary scientific and engineering problems while promoting sustainable and intelligent technological solutions for the benefit of society.
+
+Call for Papers: Technical Tracks
+
+Track 1: Computational Physics and Scientific Computing
+
+• Computational Physics
+• Scientific Simulations
+• Numerical Methods in Physics
+• High-Performance Scientific Computing
+• Physics-Informed Neural Networks
+
+Track 2: Applied Mathematics and Mathematical Modelling
+
+• Applied Mathematics
+• Mathematical Modelling and Analysis
+• Computational Mathematics
+• Optimization Techniques
+• Statistical and Probabilistic Modelling
+
+Track 3: Computational Mathematics and Theoretical Physics
+
+• Mathematical Physics
+• Computational Methods in Theoretical Physics
+• Dynamical Systems and Chaos Theory
+• Differential Equations and Applications
+• Numerical Techniques for Physical Systems
+
+Track 4: Intelligent Systems and Automation
+
+• Intelligent Systems Design
+• Intelligent Automation
+• Autonomous Systems
+• Robotics and Control Systems
+• Human and Computer Interaction
+
+Track 5: Quantum Computing and Emerging Technologies
+
+• Quantum Computing
+• Quantum Algorithms
+• Smart Computing Technologies
+• Edge Intelligence
+• Scientific Machine Learning
+
+Track 6: Data Science and Computational Intelligence
+
+• Data Science and Analytics
+• Predictive Analytics
+• Big Data Computing
+• Computational Intelligence
+• Decision Support Systems
+
+Track 7: Cybersecurity and Secure Intelligent Systems
+
+• Cybersecurity
+• Blockchain Technologies
+• Secure Computing
+• Privacy-Preserving AI
+• Digital Forensics and Information Security
+
+Track 8: Internet of Things and Smart Applications
+
+• Internet of Things (IoT)
+• Smart Sensors and Embedded Systems
+• Smart Cities and Infrastructure
+• Intelligent Transportation Systems
+• Real-Time Monitoring Systems
+
+Track 9: Sustainable Computing and Engineering Applications
+
+• Sustainable Computing
+• Green and Energy-Efficient Technologies
+• Smart Manufacturing
+• Digital Twins
+• Cyber Physical Systems
+
+Track 10: Advanced Communication and Future Networks
+
+• 5G/6G Communication Technologies
+• Cloud and Distributed Computing
+• Wireless Sensor Networks
+• Next-Generation Networking
+• Intelligent Communication Systems
+Important Keywords
+Computational Physics, Applied Mathematics, Scientific Computing, Physics-Informed AI, Quantum Computing, Intelligent Systems, Mathematical Modelling, Smart Computing, Emerging Technologies
+
+
+Key Dates:
+•	Abstract Submission Deadline: 15th January 2027
+•	Acceptance Notification: 15th February 2027
+•	Full Paper submission deadline: 15th March 2027
+•	Conference Dates: 15th and 16th April 2027
+
+Keynote Speakers with Affiliation:
+1.	Prof. N. Balakrishnan
+Distinguished Professor
+Department of Mathematics and Statistics
+McMaster University, Canada
+Expertise: Applied Mathematics, Statistical Modelling, Reliability Engineering, Computational Statistics. 
+2.	Prof. Kamesh Namuduri
+Professor
+Department of Electrical Engineering and Computer Science
+University of North Texas, USA
+Expertise: Intelligent Systems, AI, Edge Computing, Autonomous Systems. 
+3.	Prof. Vincenzo Piuri
+Professor
+Department of Computer Science
+Università degli Studi di Milano, Italy
+Expertise: Artificial Intelligence, Computational Intelligence, Biometrics, Intelligent Systems. 
+4.	Prof. Rajkumar Buyya
+Director, Cloud Computing and Distributed Systems Laboratory
+The University of Melbourne, Australia
+Expertise: Cloud Computing, Distributed Systems, AI Infrastructure, High-Performance Computing. 
+5.	Prof. S. Sadagopan
+Founder Director
+IIIT Bangalore, India
+Expertise: Intelligent Information Systems, Data Science, Digital Transformation, Computational Technologies. 
+6.	Prof. Bhabatosh Chanda
+Indian Statistical Institute, Kolkata, India
+Expertise: Computer Vision, Pattern Recognition, Mathematical Imaging, AI Applications. 
+7.	Prof. San Murugesan
+Adjunct Professor
+Western Sydney University, Australia
+Expertise: Sustainable Computing, Green Technologies, Digital Transformation, Emerging Technologies. 
+8.	Prof. Daniel Thalmann
+Director, Institute for Media Innovation
+Nanyang Technological University, Singapore
+Expertise: Intelligent Virtual Systems, Simulation Technologies, AI and Human Interaction. 
+9.	Prof. Jiankun Hu
+Professor
+School of Engineering and Information Technology
+The University of New South Wales, Australia
+Expertise: Artificial Intelligence, Machine Learning, Cyber Security, Intelligent Systems.
+10.	Prof. George Ghinea
+Professor
+Department of Computer Science
+Brunel University London, United Kingdom
+Expertise: Intelligent Systems, Human-Computer Interaction, Multimedia Computing, Educational Technologies.
+
+Organising Committee:
+Vice Patron: 
+Dr. T. R. Paarivendhar, Founder, SRM Group of Educational Institutions.
+Dr. R. Shivakumar, Chairman, SRM Group of Educational Institutions (Ramapuram & Trichy Campus)
+Mr. S. Niranjan, Co-Chairman, SRM Group of Educational Institutions (Ramapuram & Trichy Campus)
+
+Chief Patron:
+Dr. Md. Sameeruddin Khan, Pro Vice-Chancellor, SRM Group of Educational Institutions, Trichy Campus
+Dr. N. Malmurugan, Director, SRM Group of Educational Institutions, Tiruchirappalli Campus
+
+Patron:
+Dr. R. Jagadeesh Kannan, Dean, Faculty of Engineering and Technology, SRM Institute of Science and Technology, Tiruchirappalli Campus
+
+Conference Chair:
+Dr. S. Kanaga Suba Raja, Professor and Head, Department of Computer Science and Engineering, SRM Institute of Science and Technology, Tiruchirappalli Campus
+
+Technical Chair:
+Dr.S.Kanaga Suba Raja B.E., M.E., Ph.D. Professor & HoD
+Dr.P.Senthilkumar B.E., M.E., Ph.D. Associate Professor
+Dr.K.Sathish Kumar B.E., M.E., Ph.D. Associate Professor
+Dr.R.Siva Subramanian B.Tech., M.Tech., Ph.D. Associate Professor
+Dr.Rahul Shrivastava Ph.D., M.Tech., M.Tech., B.E. Associate Professor
+
+
+Conference Treasurers:
+Mr.J.Paul Rajasingh B.E., M.E., (Ph.D.) Assistant Professor
+Dr.K.R. Saranya B.Tech., M.E., Ph.D. Assistant Professor
+Dr.S. Sivakumar B.E., M.E., Ph.D. Assistant Professor
+Dr.L. Josephine Usha M.E., Ph.D. Assistant Professor
+Ms.R. Sharanya B.E., M.E., (Ph.D.) Assistant Professor
+Dr.P. Shanmuga Sundari M.E., Ph.D. Assistant Professor
+Dr.N. Saranya B.E., M.E., Ph.D. Assistant Professor
+
+Committee Members: 
+Dr.V.Mani B.Tech., M.E., Ph.D. Assistant Professor
+Dr.S. Rahmath Nisha B.E., M.Tech., Ph.D. Assistant Professor
+Dr.S.Sakthivel B.E., M.Tech., Ph.D. Assistant Professor
+Dr.Ajeyprasaath.KB B.E., M.E., Ph.D. Assistant Professor
+Mr.Nareshkumar R B.E., M.E., (Ph.D.) Assistant Professor
+Dr.M.Muthukumar B.E., M.E., Ph.D. Assistant Professor
+Dr.J.Jegan B.Tech., M.E., Ph.D. Assistant Professor
+Dr.P.Hariharan B.E., M.S., Ph.D. Assistant Professor
+Dr.S.Shargunam B.Tech., M.E., Ph.D. Assistant Professor
+Dr.Deena Rose B.E., M.E., Ph.D. Assistant Professor
+Dr.Dhanasekaran K B.E., M.E., Ph.D. Associate Professor
+
+
+Organising Committee (Students):
+1.		YUVASRI N	III CSE A
+2.		AISHWARYA C	III CSE A
+3.		SELVA P	III CSE A
+4.		NIRANJANI A	IV CSE B
+5.		DEVADHARSHNI S	III CSE B
+6.		KEERTHANAA SRI M	III CSE B
+7.		SRIRAM M	III CSE B
+8.		PAYAL AJAY	III CSE D
+9.		HARSHVARDHAN SINGH	III CSE D
+10.		VANSH PRADHAN	IV CSE D
+11.		AYUSH THAKUR	III CSE D
+12.		DEVULAPALLY VYSHNAVI	III CSE E
+13.		LEENASRI S Y	III CSE E
+14.		ISAI MANI C	III CSE E
+15.		V CHARAN	III CSE F
+16.		PIDAPARTHI VISHNUVARDHAN REDDY	IV CSE F
+17.		DIVYAANAND CHANDRASEKARAN	IV CSE F
+18.		SIVAPRASAD R	II CSE H
+19.		S HEMAVARSHINI	II CSE H
+20.		SIVADHARSHINI P	II CSE H
+21.		ROSHIDA R	II CSE H
+
+Advisory Board:
+Back in 2003, SRM set up an International Advisory Board (IAB) consisting of 31 Distinguished Deans, Directors and professors from top universities across the world. SRM's IAB is the first across the Indian University system. IAB works towards helping SRMIST set Global Standards and Internationalize through bringing globally acclaimed curriculum, research and teaching methodology to its students and faculty members.
+
+Now over 50+ Members are on IAB and they are from the best of the universities across the world including Harvard Business School, Kennedy Public School (Harvard University), MIT, Stanford, LSE, UC Berkeley, Cambridge, NUS among others.
+
+International Advisory Board:
+
+1.	Dr. Jiankun Hu
+The University of New South Wales
+Australia
+2.	Dr. Osvaldo Gervasi
+University of Perugia
+Italy
+3.	Dr. Tunde Olabiyisi
+Ladoke Akintola University of Technology
+Nigeria
+4.	Dr. George Ghinea
+Brunel University
+United Kingdom
+5.	Dr. Rahim Tafazolli
+University of Surrey
+United Kingdom
+6.	Dr. Chua Sook Ling @ Landa Chua
+Multimedia University
+Malaysia
+7.	Dr. Atma Sahu
+Coppin State University
+USA
+8.	Dr. PaO-Ann Hsiung
+National Chung Cheng University
+Taiwan
+9.	Dr. Hadi Susanto
+Khalifa University
+UAE
+10.	Dr. Girijesh Prasad
+Ulster University
+United Kingdom
+11.	Dr. Kawal Sawhney
+University of Oxford
+United Kingdom
+12.	Dr. Zhenlu Cui
+Fayetteville State University
+USA
+13.	Dr. Stefano Mariani
+University of Milan
+Italy
+
+National Advisory Board:
+1.	Dr. S. Thamarai Selvi
+Thiruvalluvar University
+Vellore
+2.	Dr. P. Yogesh
+Anna University
+Chennai
+3.	Dr. R N Kulkarni
+Ballari Institute of Technology & Management
+Ballari
+4.	Dr. A. Amuthan
+Puducherry Technological University
+Puducherry
+5.	Dr. S. Mary Saira Bhanu
+National Institute of Technology
+Tiruchirappalli
+6.	Dr. R. Rajesh
+Central University of Kerala
+Kerala
+7.	Dr. R. Baskaran
+Anna University
+Chennai
+8.	Dr. PJA Alphonse
+National Institute of Technology
+Tiruchirappalli
+9.	Dr. R. S. Bhuvaneswaran
+Anna University
+Chennai
+10.	Dr. R. Dhanalakshmi
+IIIT
+Tiruchirappalli
+11.	Dr. R. Bala venkata Subramanyam
+National Institute of Technology
+Warangal
+12.	Dr. Pandiri Venkatesh
+IIITDM Kancheepuram
+Chennai
+13.	Dr. C. Valliamma
+Anna University
+Chennai
+14.	Dr. Ponsy. R. K. Sathiyabama
+Anna University
+Chennai
+15.	Dr. V. Akila
+Puducherry Technological University
+Puducherry
+16.	Dr. S.Janakiraman
+Pondicherry University
+Pondicherry
+17.	Dr. J. Arul Valan
+National Institute of Technology
+Nagaland
+18.	Dr. K. Kathiravan
+SRM Group of Institutions, Ramapuram Campus
+Chennai
+
+Contact Details:
+
+Dr. S. Kanaga Suba Raja 
+Professor and Head
+Department of Computer Science and Engineering
+SRM Institute of Science and Technology Tiruchirappalli
+9486684400
+Kanagasubaraja.s@ist.srmtrichy.edu.in
+SRM Institute of Science and Technology
+Tiruchirappalli, Tamil Nadu, India
+
+Article Submission: 
+The submitted articles should not be currently under review by any other conference or journal. All submissions shall be handled through the easy chair conference management system. Conference solicits high impact, high quality, original and unpublished work related to one of the theme areas.
+
+Paper Submission Instructions:
+While preparing your manuscript, we recommend to copy paste your content directly into this AIP template. (The template is to be attached in the website)
+Short papers - 9 to 11 Pages and Long Papers 12-15 Pages 
+
+Review Process: 
+a) At first, the manuscripts received would be evaluated from the purview of the scope of this conference.
+b) Screened submissions undergo an initial quality check through Turnitin Software for potential similarity with published literature.
+c) Subsequently, the manuscripts with a similarity index of less than 5 percent would be sent for single-blind review by three independent referees
+d) A consensus of three reviewers would be mandatory for the acceptance of manuscripts
+e) One reviewer would not review more than three manuscripts
+
+Publication and Indexing: The articles submitted to the International Conference on Generative AI Applications in Science and Technology will be subjected to double-blind peer review by the panel of experts. All accepted and registered papers will be included in the conference proceedings that will be published by AIP. (Waiting for approval)
+
+Best Paper Award: One paper from each of the listed tracks will be selected as Best Paper. The Best Papers will be announced at culmination of the conference.
+
+More Information: More information regarding paper format and guidelines for paper submission can be found at the conference website https://srmist-trc-conference.vercel.app/
+
+Registration and Pricing:
+
+•	For each accepted paper, at least one of the authors must register for the conference.
+•	One registration in Student category to allow One paper presentation/publication
+•	One registration in Faculty category to allow Two paper presentations/publications (provided that both the papers have been accepted upon peer review)
+•	Registration in the Author's Registration Category is mandatory for Presentation of the paper in the conference
+•	Inclusion of paper in the conference proceedings
+•	If one of the authors of the paper has registered in author's registration category then all other authors of the paper may register under co-authors' registration category if they wish to attend the conference.
+Per person registration fee structure is as follows -
+Authors would be able to avail an early bird discount of 10% on the below mentioned registration fee if they register before.
+
+
+Category	Student / Research Scholar	Faculty/ Academician	Industry Professional	Co-Author/ Attendee
+Authors from India (INR)	16500	12000	12000	2000
+Authors from outside India (USD)	170	200	200	65
+
+Information on past Iterations: 
+
+The conference chair has already conducted an international conference under the collaboration of AIP Publishers. 
+The following details for your reference:
+
+Conference name: International Virtual Conference on Machine Learning Applications in Applied Sciences and Mathematics (IVCMASM)
+Volume number:  Volume 2802, Issue 1
+Name of the Editors and Organizers: Dr. S. Kanaga Suba Raja
+Date of Conference: 30th and 31st March 2022
+
+
+
+Tentative Program Schedule:
+
+International Conference on Artificial Intelligence Applications in Applied Sciences and Mathematics
+15th and 16th April 2027
+Organised by SRM Institute of Science and Technology Tiruchirappalli
+Day 1 Conference (15th April 2027)	Day 2 Conference (16st April 2027)
+
+09.30am – 10.00 am Inauguration
+10.00am – 10.45am Keynote Seminar
+10.45am – 11.00am Session Break
+11.00am – 01.00pm Technical Presentation I
+(Parallel 06 Sessions)
+01.00pm – 01.40pm Lunch Break
+01.40pm – 03.00pm Technical Presentation II
+(Parallel 06 Sessions)
+03.00pm – 03.10pm Tea Break
+03.10pm – 04.00pm Technical Presentation III
+(Parallel 06 Sessions)
+First Day Technical Sessions Closed	09.30am – 10.10am Keynote Seminar
+10.10am – 10.20am Session Break
+10.20am – 11.30am Technical Presentation IV
+(Parallel 06 Sessions)
+11.30am – 11.40am Tea Break
+11.40am – 01.00pm Technical Presentation V
+(Parallel 06 Sessions)
+01.00pm – 01.40pm Lunch Break
+01.40pm – 03.00pm Technical Presentation VI 
+(Parallel 06 Sessions)
+03.00pm – 03.10pm Tea Break
+03.10pm – 04.10pm Technical Presentation VII
+(Parallel 06 Sessions)
+04.10pm – 04.40pm Valedictory Function
+Second Day Technical Session Closed
+
+
+
+
+Presentation Time: 10 Minutes
+Presentation Format: Power Point Presentation (PPT)
+Venue: 
+SRM Institute of Science and Technology 
+Tiruchirappalli Campus-621105.
+Tamil Nadu, India

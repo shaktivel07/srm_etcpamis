@@ -1,0 +1,3065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ETCPAMIS 2027 – International Conference on Emerging Trends in Computational Physics, Applied Mathematics and
+    Intelligent Systems</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    /* ─── DESIGN TOKENS ─── */
+    :root {
+      --navy: #0A075F;
+      --navy2: #002160;
+      --blue9: #1e3a8a;
+      --yellow: #FFC53A;
+      --pink: #f2295b;
+      --pink2: --db2777;
+      --white: #ffffff;
+      --neutral-100: #f5f5f5;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+      --gray-600: #4b5563;
+      --gray-800: #1f2937;
+      --font-head: 'Inter', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: #111;
+      background: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ─── NAVBAR ─── */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #fff;
+      border-top: 2px solid var(--gray-200);
+      border-bottom: 2px solid var(--gray-200);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      height: 4.5rem;
+    }
+
+    .nav-logo {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+    }
+
+    .nav-logo-img {
+      height: 3rem;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-logo-text span {
+      color: var(--yellow);
+      font-size: .75rem;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: .25rem;
+    }
+
+    .nav-links a {
+      font-family: var(--font-head);
+      font-size: .85rem;
+      font-weight: 600;
+      padding: .6rem .9rem;
+      position: relative;
+      color: #111;
+      transition: background .2s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--yellow);
+      transition: width .3s;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-links a.active {
+      background: var(--yellow);
+    }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .5rem;
+    }
+
+    .hamburger svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 4.5rem;
+      left: 0;
+      right: 0;
+      background: #fff;
+      z-index: 99;
+      border-bottom: 2px solid var(--gray-200);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .1);
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0;
+      gap: .75rem;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-weight: 600;
+      padding: .5rem 2rem;
+    }
+
+    .mobile-menu a.active {
+      background: var(--yellow);
+      border-radius: 4px;
+    }
+
+    /* ─── HERO / BANNER ─── */
+    #home {
+      margin-top: 4.5rem;
+    }
+
+    @media (min-width: 768px) {
+      #home {
+        margin-top: 5rem;
+      }
+    }
+
+    .hero-section {
+      position: relative;
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #001a4d 0%, #0A075F 40%, #150FC5 75%, #f2295b 100%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(112deg, rgba(0, 33, 96, .92) 28%, rgba(242, 41, 91, .75) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: #fff;
+      padding: 3.5rem 1.5rem;
+      max-width: 980px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 197, 58, .18);
+      border: 1px solid rgba(255, 197, 58, .5);
+      border-radius: 99px;
+      padding: .35rem 1.2rem;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      color: var(--yellow);
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: .9rem;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-divider::before,
+    .hero-divider::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1.5px;
+      background: rgba(255, 255, 255, .5);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .hero-meta-item svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--pink);
+      color: #fff;
+      padding: .9rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background .2s, transform .15s;
+      cursor: pointer;
+    }
+
+    .hero-btn:hover {
+      background: var(--pink);
+      transform: translateY(-2px);
+    }
+
+    .hero-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* ─── SECTION UTILITIES ─── */
+    .section {
+      padding: 4rem 1.5rem;
+    }
+
+    .section-center {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-wide {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.4rem, 3vw, 1.875rem);
+      font-weight: 600;
+      color: var(--blue9);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section-title span {
+      color: var(--yellow);
+    }
+
+    .bg-neutral {
+      background: var(--neutral-100);
+    }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      font-size: .95rem;
+      line-height: 1.85;
+      list-style: disc;
+      padding-left: 1.25rem;
+    }
+
+    .about-text li+li {
+      margin-top: .75rem;
+    }
+
+    .about-read-more {
+      display: inline-block;
+      margin-top: 1.25rem;
+      background: var(--yellow);
+      color: var(--navy);
+      font-weight: 600;
+      padding: .5rem 1.5rem;
+      border-radius: 99px;
+      transition: opacity .2s;
+      cursor: pointer;
+    }
+
+    .about-read-more:hover {
+      opacity: .85;
+    }
+
+    .yt-wrap {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border: none;
+    }
+
+    /* ─── ORGANIZED BY ─── */
+    .org-band {
+      background: linear-gradient(to right, var(--yellow), var(--pink));
+      color: #fff;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .org-band h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .org-band hr {
+      width: 80px;
+      border-top: 3px solid rgba(255, 255, 255, .7);
+      margin: .25rem auto;
+    }
+
+    .org-band p {
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+
+
+
+    /* ─── KEY DATES ─── */
+    .dates-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .date-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .9rem;
+      font-size: .95rem;
+    }
+
+    .date-num {
+      flex-shrink: 0;
+      background: var(--blue9);
+      color: #fff;
+      border-radius: 99px;
+      padding: .25rem .65rem;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .date-item strong {
+      font-weight: 600;
+    }
+
+    /* ─── CALL FOR PAPERS ─── */
+    .cfp-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .track-title {
+      color: var(--blue9);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: .75rem;
+    }
+
+    .track-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    .track-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .9rem;
+    }
+
+    .track-list li::before {
+      content: '›';
+      color: var(--blue9);
+      font-weight: 700;
+      font-size: 1.1rem;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    /* ─── FEE DETAILS BOX ─── */
+    .fee-band-box {
+      border: 2px solid var(--pink);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, rgba(255, 197, 58, 0.06) 0%, rgba(242, 41, 91, 0.06) 100%);
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(242, 41, 91, 0.05);
+    }
+
+    .fee-band-box h2 {
+      font-family: var(--font-head);
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--blue9);
+      margin-bottom: 1rem;
+    }
+
+    .fee-band-box .announced-badge {
+      display: inline-block;
+      background: var(--pink);
+      color: #fff;
+      padding: 0.6rem 2rem;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 15px rgba(242, 41, 91, 0.35);
+    }
+
+    .fee-band-box p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin-top: 1.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    /* ─── REGISTRATION ─── */
+    .reg-guidelines {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .9rem;
+    }
+
+    .reg-guidelines li {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      font-size: .93rem;
+      line-height: 1.6;
+    }
+
+    .reg-tick {
+      color: var(--blue9);
+      font-weight: 700;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+
+    .reg-table-wrap {
+      overflow-x: auto;
+      margin-top: 1.5rem;
+    }
+
+    .reg-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+      font-size: .9rem;
+    }
+
+    .reg-table th {
+      background: var(--gray-200);
+      padding: .8rem 1rem;
+      border: 1px solid var(--gray-300);
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .reg-table td {
+      padding: 1.2rem 1rem;
+      border: 1px solid var(--gray-300);
+    }
+
+    .reg-table tr:hover td {
+      background: #f9fafb;
+    }
+
+    .reg-note {
+      font-size: .82rem;
+      color: var(--gray-600);
+      margin-top: .75rem;
+    }
+
+    /* ─── EDITORS / COMMITTEE ─── */
+    .editors-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .editor-card {
+      border: 1px solid var(--gray-300);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      transition: box-shadow .2s;
+    }
+
+    .editor-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+    }
+
+    .editor-name {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--blue9);
+    }
+
+    .editor-role {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--pink);
+      margin-top: .2rem;
+    }
+
+    .editor-affil {
+      font-size: .87rem;
+      color: var(--gray-600);
+      margin-top: .4rem;
+      line-height: 1.5;
+    }
+
+    .editor-email {
+      font-size: .85rem;
+      color: var(--blue9);
+      margin-top: .5rem;
+    }
+
+    /* ─── REACH US / CONTACT ─── */
+    .contact-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      min-height: 60vh;
+      background: var(--neutral-100);
+      padding: 3rem 1.5rem;
+      justify-content: center;
+    }
+
+    .contact-card {
+      background: linear-gradient(to bottom, var(--navy), #150FC5);
+      color: #fff;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 8px 32px rgba(10, 7, 95, .25);
+      transition: transform .3s, box-shadow .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 16px 48px rgba(10, 7, 95, .35);
+    }
+
+    .contact-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: .75rem;
+      margin-bottom: 1.25rem;
+      font-size: .93rem;
+      line-height: 1.5;
+    }
+
+    .contact-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+
+    .contact-card a {
+      color: #fff;
+    }
+
+    .map-wrap {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .map-wrap iframe {
+      display: block;
+      width: 100%;
+      border: 0;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+      padding: 3rem 1.5rem;
+      gap: 2rem;
+    }
+
+    .footer-col h4 {
+      padding: .6rem 0 .6rem 1rem;
+      border-left: 4px solid var(--yellow);
+      text-transform: uppercase;
+      font-size: .95rem;
+      letter-spacing: .05em;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+    }
+
+    .footer-col ul li a {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .9rem;
+      transition: color .2s;
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--yellow);
+    }
+
+    footer hr {
+      width: 80%;
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .footer-copy {
+      padding: .75rem 1rem;
+      font-size: .8rem;
+      text-align: center;
+      color: rgba(255, 255, 255, .7);
+    }
+
+    .footer-copy a {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      width: 100%;
+    }
+
+    .footer-logos img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: .6;
+      transition: opacity .2s;
+    }
+
+    /* ─── TABS (Advisory Board) ─── */
+    .tab-bar {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-btn {
+      padding: .55rem 1.25rem;
+      border: 2px solid var(--blue9);
+      background: transparent;
+      color: var(--blue9);
+      font-weight: 600;
+      font-size: .88rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all .2s;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: var(--blue9);
+      color: #fff;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .board-card {
+      background: #fff;
+      border: 1px solid var(--gray-300);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+    }
+
+    .board-name {
+      font-weight: 700;
+      color: var(--blue9);
+      font-size: .95rem;
+    }
+
+    .board-uni {
+      font-size: .85rem;
+      color: var(--gray-600);
+    }
+
+    .board-country {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--pink);
+    }
+
+    /* ─── PAGE SECTIONS ─── */
+    .page-section {
+      display: none;
+    }
+
+    .page-section.active-page {
+      display: block;
+    }
+
+    /* ─── ABOUT PAGE DETAILS ─── */
+    .about-detail-img {
+      width: 100%;
+      height: 35vh;
+      object-fit: cover;
+    }
+
+    .about-detail-content {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .about-detail-content h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--blue9);
+      margin-bottom: 1rem;
+      font-family: var(--font-head);
+    }
+
+    .about-detail-content p {
+      line-height: 1.9;
+      font-size: .93rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-detail-content h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: .75rem;
+      font-family: var(--font-head);
+    }
+
+    .about-vision-item {
+      display: flex;
+      gap: .75rem;
+      align-items: flex-start;
+      margin-bottom: .75rem;
+      font-size: .93rem;
+      line-height: 1.7;
+    }
+
+    .tick-icon {
+      color: var(--blue9);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      line-height: 1.2;
+    }
+
+    /* ─── TRAVEL GUIDE PAGE STYLING ─── */
+    .travel-hero-overlay {
+      position: relative;
+      min-height: 38vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(112deg, rgba(10, 7, 95, 0.95) 20%, rgba(242, 41, 91, 0.9) 100%);
+    }
+
+    .travel-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .travel-intro-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2rem;
+      border: 1px solid var(--gray-200);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+
+    .travel-intro-card h3 {
+      font-family: var(--font-head);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--blue9);
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      margin-bottom: 1rem;
+    }
+
+    .travel-intro-card p {
+      font-size: .95rem;
+      line-height: 1.8;
+      color: var(--gray-600);
+    }
+
+    .travel-places-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .travel-item-card-no-pic {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--gray-200);
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .travel-item-card-no-pic:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(10, 7, 95, 0.08);
+    }
+
+    .travel-card-badge {
+      align-self: flex-start;
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: .25rem .75rem;
+      border-radius: 99px;
+      letter-spacing: .05em;
+      margin-bottom: 0.75rem;
+    }
+
+    .theme-gold {
+      border-top: 4px solid var(--yellow);
+    }
+
+    .theme-gold .travel-card-badge {
+      background: rgba(255, 197, 58, 0.15);
+      color: #b28511;
+    }
+
+    .theme-blue {
+      border-top: 4px solid var(--blue9);
+    }
+
+    .theme-blue .travel-card-badge {
+      background: rgba(30, 58, 138, 0.1);
+      color: var(--blue9);
+    }
+
+    .theme-green {
+      border-top: 4px solid #10b981;
+    }
+
+    .theme-green .travel-card-badge {
+      background: rgba(16, 185, 129, 0.1);
+      color: #065f46;
+    }
+
+    .theme-pink {
+      border-top: 4px solid var(--pink);
+    }
+
+    .theme-pink .travel-card-badge {
+      background: rgba(242, 41, 91, 0.1);
+      color: var(--pink);
+    }
+
+    .theme-purple {
+      border-top: 4px solid #8b5cf6;
+    }
+
+    .theme-purple .travel-card-badge {
+      background: rgba(139, 92, 246, 0.1);
+      color: #5b21b6;
+    }
+
+    .travel-item-card-no-pic h4 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: .5rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .travel-item-card-no-pic p {
+      font-size: .88rem;
+      line-height: 1.6;
+      color: var(--gray-600);
+    }
+
+    /* ─── RESPONSIVE DOWNLOADS TABLE TO CARDS (MODIFIED) ─── */
+    .downloads-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    @media (max-width: 767px) {
+
+      .downloads-table,
+      .downloads-table thead,
+      .downloads-table tbody,
+      .downloads-table th,
+      .downloads-table td,
+      .downloads-table tr {
+        display: block;
+        width: 100%;
+      }
+
+      .downloads-table thead {
+        display: none;
+      }
+
+      .downloads-table tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--gray-300);
+        border-radius: 12px;
+        padding: 1.25rem;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+      }
+
+      .downloads-table td {
+        border: none !important;
+        padding: 0.5rem 0 !important;
+        text-align: left !important;
+      }
+
+      .downloads-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        display: block;
+        color: var(--navy);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        margin-bottom: 0.35rem;
+        letter-spacing: 0.05em;
+      }
+
+      .downloads-table td[data-label="Action"] .hero-btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+      }
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (min-width: 1024px) {
+      #navbar {
+        padding: 0 1.5rem;
+        height: 5rem;
+      }
+
+      .mobile-menu {
+        top: 5rem;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1300px) {
+      .nav-links a {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.75rem;
+      }
+
+      .nav-logo {
+        font-size: 0.95rem;
+      }
+
+      .nav-logo-img {
+        height: 2.5rem;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      br.desktop-only {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .about-grid {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .about-grid>* {
+        flex: 1;
+      }
+
+      .org-band {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+        text-align: left;
+      }
+
+      .org-band .org-text {
+        max-width: 480px;
+      }
+
+      .contact-wrap {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3rem;
+      }
+
+      .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .editors-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-detail-img {
+        height: 50vh;
+      }
+
+      .about-detail-content {
+        padding: 3rem 5rem;
+      }
+
+      .travel-intro-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .travel-places-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .board-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .travel-places-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav id="navbar">
+    <a class="nav-logo" href="#" onclick="showPage('home')">
+      <img class="nav-logo-img" src="logo.png" alt="SRM IST Logo" onerror="this.style.display='none'" />
+      <div class="nav-logo-text">
+        ETCPAMIS 2027
+        <span>SRM IST Tiruchirappalli</span>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#" onclick="showPage('home')" class="active" data-page="home">Home</a>
+      <a href="#" onclick="showPage('about-page')" data-page="about-page">About</a>
+      <a href="#" onclick="showPage('keynote')" data-page="keynote">Keynote Speakers</a>
+      <a href="#" onclick="showPage('advisory')" data-page="advisory">Advisory Board</a>
+      <a href="#" onclick="showPage('committee')" data-page="committee">Committee</a>
+      <a href="#" onclick="showPage('publication')" data-page="publication">Publication</a>
+      <a href="#" onclick="showPage('registration')" data-page="registration">Registration</a>
+      <a href="#" onclick="showPage('travel-guide')" data-page="travel-guide">Travel Guide</a>
+      <a href="#" onclick="showPage('downloads')" data-page="downloads">Downloads</a>
+      <a href="#" onclick="showPage('reach-us')" data-page="reach-us">Reach Us</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <svg id="ham-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#" onclick="showPage('home');closeMenu()" data-page="home">Home</a>
+    <a href="#" onclick="showPage('about-page');closeMenu()" data-page="about-page">About</a>
+    <a href="#" onclick="showPage('keynote');closeMenu()" data-page="keynote">Keynote Speakers</a>
+    <a href="#" onclick="showPage('advisory');closeMenu()" data-page="advisory">Advisory Board</a>
+    <a href="#" onclick="showPage('committee');closeMenu()" data-page="committee">Committee</a>
+    <a href="#" onclick="showPage('publication');closeMenu()" data-page="publication">Publication</a>
+    <a href="#" onclick="showPage('registration');closeMenu()" data-page="registration">Registration</a>
+    <a href="#" onclick="showPage('travel-guide');closeMenu()" data-page="travel-guide">Travel Guide</a>
+    <a href="#" onclick="showPage('downloads');closeMenu()" data-page="downloads">Downloads</a>
+    <a href="#" onclick="showPage('reach-us');closeMenu()" data-page="reach-us">Reach Us</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: HOME                                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="home" class="page-section active-page">
+
+    <!-- HERO -->
+    <section class="hero-section" style="position: relative; overflow: hidden;">
+      <div class="hero-bg" style="position: absolute; inset: 0; z-index: 0;">
+        <img src="pic_4.JPG.jpeg" alt="Hero Background"
+          style="width: 100%; height: 100%; object-fit: cover; filter: brightness(.75);"
+          onerror="this.src='https://placehold.co'" />
+      </div>
+
+      <div class="hero-overlay" style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.45); z-index: 1;">
+      </div>
+
+      <div class="hero-content reveal" style="position: relative; z-index: 2;">
+        <div class="hero-badge">AIP Conference Proceedings (Waiting for approval)</div>
+
+        <h1
+          style="font-size: clamp(1rem, 3.5vw, 1.5rem); font-weight: 700; font-family: var(--font-head); max-width: 950px; margin: 0 auto 1rem; line-height: 1.35; color: #fff;">
+          International Conference on Emerging Trends in Computational Physics, Applied Mathematics and Intelligent
+          Systems (ETCPAMIS) </h1>
+
+
+        <p
+          style="font-size: clamp(0.5rem, 1.8vw, 1rem); font-weight: 600; color: var(--yellow); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          Organized by SRM Institute of Science and Technology, Tiruchirappalli
+        </p>
+
+        <div class="hero-divider">ETCPAMIS 2027</div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            15TH &amp; 16TH APRIL 2027
+          </div>
+          <div class="hero-meta-item">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            SRM IST, Tiruchirappalli &nbsp;·&nbsp; Hybrid Mode
+          </div>
+        </div>
+        <span class="hero-btn" onclick="showPage('registration')">
+          Register
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </div>
+    </section>
+
+    <!-- ABOUT CONFERENCE (HOME TEASER) -->
+    <section class="section" id="about">
+      <div class="section-wide">
+        <h2 class="section-title">ABOUT THE <span>CONFERENCE</span></h2>
+        <div class="about-grid reveal">
+          <div>
+            <ul class="about-text">
+              <li>ETCPAMIS 2027 aims to provide a premier interdisciplinary platform for academicians, researchers,
+                scientists, industry professionals, and students to present and discuss recent advancements, innovative
+                methodologies, and emerging research trends in Computational Physics, Applied Mathematics, Scientific
+                Computing, Artificial Intelligence, and Intelligent Systems.</li>
+              <li>The conference seeks to foster collaboration among academia, research institutions, and industries by
+                encouraging the exchange of novel ideas, scientific discoveries, computational techniques, and
+                technological innovations that address real-world scientific and engineering challenges.</li>
+            </ul>
+            <span class="about-read-more" onclick="showPage('about-page')">Read More</span>
+          </div>
+          <div>
+            <iframe class="yt-wrap" src="https://www.youtube.com/embed/Ajsnl6-NpwY?si=YcTWQcWodUe0CZT9"
+              title="SRM IST Trichy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORGANIZED BY -->
+    <div class="org-band reveal">
+      <div class="org-text">
+        <h3>Organized By </h3>
+
+        <p>
+          Department of Computer Science and Engineering<br />
+          SRM Institute of Science and Technology,<br />
+          SRM Nagar, Irungalur, Near Samayapuram Toll Plaza,<br />
+          Trichy–Chennai Highway, Tiruchirappalli,<br />
+          Tamil Nadu – 621105, India.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- FULL WIDTH CAMPUS SLIDESHOW WITH INLINED LOGIC -->
+    <section class="campus-slider-section"
+      style="position: relative; width: 100vw; margin-left: calc(-50vw + 50%); margin-right: calc(-50vw + 50%); overflow: hidden; height: 60vh; min-height: 380px; max-height: 580px; background: #000; margin-top: 3rem; margin-bottom: 3rem; z-index: 100;">
+      <div class="slider-wrapper" style="position: relative; width: 100%; height: 100%;" data-index="0"
+        img-init="const wrap=this; const slides=wrap.querySelectorAll('.campus-slide'); setInterval(() => { let idx=parseInt(wrap.getAttribute('data-index')); slides[idx].style.opacity='0'; slides[idx].style.zIndex='1'; idx=(idx+1)%slides.length; wrap.setAttribute('data-index', idx); slides[idx].style.opacity='1'; slides[idx].style.zIndex='2'; }, 150);">
+
+        <!-- Slide 1 -->
+        <div class="campus-slide"
+          style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.05s linear; z-index: 2;">
+          <img src="pic_5.JPG.jpeg" alt="SRM IST Tiruchirappalli Campus – Department Block"
+            style="width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.removeAttribute('onerror'); this.src='https://placehold.co'; const p=this.closest('.slider-wrapper'); if(!p.hasAttribute('data-run')){p.setAttribute('data-run','1'); eval(p.getAttribute('img-init'));}" />
+          <div class="slide-caption"
+            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; padding: 2rem 1.5rem; text-align: center; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); z-index: 10;">
+            SRM IST Tiruchirappalli Campus – Department Block
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="campus-slide"
+          style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.05s linear; z-index: 1;">
+          <img src="cse.png" alt="SRM IST Campus – iMac Lab" style="width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.removeAttribute('onerror'); this.src='https://placehold.co'; const p=this.closest('.slider-wrapper'); if(!p.hasAttribute('data-run')){p.setAttribute('data-run','1'); eval(p.getAttribute('img-init'));}" />
+          <div class="slide-caption"
+            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; padding: 2rem 1.5rem; text-align: center; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); z-index: 10;">
+            SRM IST Campus – iMac Lab
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="campus-slide"
+          style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.05s linear; z-index: 1;">
+          <img src="314A0112 (1).jpg" alt="SRM IST Campus" style="width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.removeAttribute('onerror'); this.src='https://placehold.co'; const p=this.closest('.slider-wrapper'); if(!p.hasAttribute('data-run')){p.setAttribute('data-run','1'); eval(p.getAttribute('img-init'));}" />
+          <div class="slide-caption"
+            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; padding: 2rem 1.5rem; text-align: center; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); z-index: 10;">
+            SRM IST Campus
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="campus-slide"
+          style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.05s linear; z-index: 1;">
+          <img src="pic_4.JPG.jpg" alt="SRM IST Campus – Auditorium / Conference Hall"
+            style="width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.removeAttribute('onerror'); this.src='https://placehold.co'; const p=this.closest('.slider-wrapper'); if(!p.hasAttribute('data-run')){p.setAttribute('data-run','1'); eval(p.getAttribute('img-init'));}" />
+          <div class="slide-caption"
+            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; padding: 2rem 1.5rem; text-align: center; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); z-index: 10;">
+            SRM IST Campus
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="campus-slide"
+          style="position: absolute; inset: 0; opacity: 0; transition: opacity 0.05s linear; z-index: 1;">
+          <img src="314A0023 (1).jpg" alt="SRM IST Campus – Library"
+            style="width: 100%; height: 100%; object-fit: cover;"
+            onerror="this.removeAttribute('onerror'); this.src='https://placehold.co'; const p=this.closest('.slider-wrapper'); if(!p.hasAttribute('data-run')){p.setAttribute('data-run','1'); eval(p.getAttribute('img-init'));}" />
+          <div class="slide-caption"
+            style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%); color: #fff; padding: 2rem 1.5rem; text-align: center; font-family: var(--font-head); font-size: 1.15rem; font-weight: 600; text-shadow: 1px 1px 4px rgba(0,0,0,0.9); z-index: 10;">
+            SRM IST Campus
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- KEY DATES -->
+    <section class="section" id="dates">
+      <div class="section-center">
+        <h2 class="section-title" style="display:flex;align-items:center;justify-content:center;gap:.75rem;">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="#1e3a8a"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          KEY <span>&nbsp;DATES</span>
+        </h2>
+        <div class="dates-list reveal">
+          <div class="date-item"><span class="date-num">1</span>
+            <p>Abstract Submission Deadline: <strong>15th January 2027</strong></p>
+          </div>
+          <div class="date-item"><span class="date-num">2</span>
+            <p>Acceptance Notification: <strong>15th February 2027</strong></p>
+          </div>
+          <div class="date-item"><span class="date-num">3</span>
+            <p>Full Paper submission deadline: <strong>15th March 2027</strong></p>
+          </div>
+
+          <div class="date-item"><span class="date-num">4</span>
+            <p>Conference Dates: <strong>15th and 16th April 2027</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- CONFERENCE OBJECTIVES (MOVED TO HOME PAGE) -->
+    <section class="section" id="conference-objectives"
+      style="border-top: 1px solid var(--gray-200); background-color: #fafafa;">
+      <div class="section-center">
+        <h2 class="section-title" style="margin-bottom:1.5rem;">CONFERENCE <span>OBJECTIVES</span></h2>
+        <ul class="reg-guidelines reveal" style="margin-top:.75rem;">
+          <li><span class="reg-tick">✓</span>To promote high-quality research in areas such as mathematical modelling,
+            computational simulations, quantum computing, physics-informed artificial intelligence, intelligent
+            automation, scientific data analytics, sustainable technologies, and interdisciplinary intelligent systems.
+          </li>
+          <li><span class="reg-tick">✓</span>To foster collaboration among academia, research institutions, and
+            industries by encouraging the exchange of novel ideas, scientific discoveries, computational techniques, and
+            technological innovations.</li>
+          <li><span class="reg-tick">✓</span>To contribute significantly to scientific advancement, technological
+            innovation, and global research collaboration in emerging computational and intelligent technologies through
+            keynote lectures, technical sessions, and scholarly interactions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CALL FOR PAPERS -->
+    <section class="section bg-neutral" id="callforpapers">
+      <div class="section-wide">
+        <h2 class="section-title">CALL FOR <span>PAPERS</span></h2>
+        <p style="text-align:center; margin-bottom:2rem; font-size:.93rem; color:var(--gray-600);">Authors are invited
+          to submit original, unpublished work. Papers must not be under review elsewhere simultaneously.</p>
+        <div class="cfp-grid reveal">
+          <div class="track-card">
+            <p class="track-title">Track 1: Computational Physics and Scientific Computing</p>
+            <ul class="track-list">
+              <li>Computational Physics</li>
+              <li>Scientific Simulations</li>
+              <li>Numerical Methods in Physics</li>
+              <li>High-Performance Scientific Computing</li>
+              <li>Physics-Informed Neural Networks</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 2: Applied Mathematics and Mathematical Modelling</p>
+            <ul class="track-list">
+              <li>Applied Mathematics</li>
+              <li>Mathematical Modelling and Analysis</li>
+              <li>Computational Mathematics</li>
+              <li>Optimization Techniques</li>
+              <li>Statistical and Probabilistic Modelling</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 3: Computational Mathematics and Theoretical Physics</p>
+            <ul class="track-list">
+              <li>Mathematical Physics</li>
+              <li>Computational Methods in Theoretical Physics</li>
+              <li>Dynamical Systems and Chaos Theory</li>
+              <li>Differential Equations and Applications</li>
+              <li>Numerical Techniques for Physical Systems</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 4: Intelligent Systems and Automation</p>
+            <ul class="track-list">
+              <li>Intelligent Systems Design</li>
+              <li>Intelligent Automation</li>
+              <li>Autonomous Systems</li>
+              <li>Robotics and Control Systems</li>
+              <li>Human and Computer Interaction</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 5: Quantum Computing and Emerging Technologies</p>
+            <ul class="track-list">
+              <li>Quantum Computing</li>
+              <li>Quantum Algorithms</li>
+              <li>Smart Computing Technologies</li>
+              <li>Edge Intelligence</li>
+              <li>Scientific Machine Learning</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 6: Data Science and Computational Intelligence</p>
+            <ul class="track-list">
+              <li>Data Science and Analytics</li>
+              <li>Predictive Analytics</li>
+              <li>Big Data Computing</li>
+              <li>Computational Intelligence</li>
+              <li>Decision Support Systems</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 7: Cybersecurity and Secure Intelligent Systems</p>
+            <ul class="track-list">
+              <li>Cybersecurity</li>
+              <li>Blockchain Technologies</li>
+              <li>Secure Computing</li>
+              <li>Privacy-Preserving AI</li>
+              <li>Digital Forensics and Information Security</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 8: Internet of Things and Smart Applications</p>
+            <ul class="track-list">
+              <li>Internet of Things (IoT)</li>
+              <li>Smart Sensors and Embedded Systems</li>
+              <li>Smart Cities and Infrastructure</li>
+              <li>Intelligent Transportation Systems</li>
+              <li>Real-Time Monitoring Systems</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 9: Sustainable Computing and Engineering Applications</p>
+            <ul class="track-list">
+              <li>Sustainable Computing</li>
+              <li>Green and Energy-Efficient Technologies</li>
+              <li>Smart Manufacturing</li>
+              <li>Digital Twins</li>
+              <li>Cyber Physical Systems</li>
+            </ul>
+          </div>
+          <div class="track-card">
+            <p class="track-title">Track 10: Advanced Communication and Future Networks</p>
+            <ul class="track-list">
+              <li>5G/6G Communication Technologies</li>
+              <li>Cloud and Distributed Computing</li>
+              <li>Wireless Sensor Networks</li>
+              <li>Next-Generation Networking</li>
+              <li>Intelligent Communication Systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEYNOTE SPEAKERS (HOME PREVIEW) -->
+    <section class="section" id="keynote-preview"
+      style="border-top: 1px solid var(--gray-200); background-color: #ffffff;">
+      <div class="section-center">
+        <h2 class="section-title">KEYNOTE <span>SPEAKERS</span></h2>
+        <p
+          style="text-align:center; margin-bottom:2.5rem; font-size:.95rem; color:var(--gray-600); max-width:700px; margin-left:auto; margin-right:auto;">
+          Meet our distinguished keynote speakers who will share their expertise and insights during the conference.
+        </p>
+        <div class="editors-grid reveal">
+          <div class="editor-card">
+            <p class="editor-name">Prof. N. Balakrishnan</p>
+            <p class="editor-role">Distinguished Professor, Dept. of Mathematics and Statistics</p>
+            <p class="editor-affil">McMaster University, Canada<br /><em>Expertise: Applied Mathematics, Statistical
+                Modelling, Reliability Engineering, Computational Statistics</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Kamesh Namuduri</p>
+            <p class="editor-role">Professor, Dept. of Electrical Engineering and Computer Science</p>
+            <p class="editor-affil">University of North Texas, USA<br /><em>Expertise: Intelligent Systems, AI, Edge
+                Computing, Autonomous Systems</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Vincenzo Piuri</p>
+            <p class="editor-role">Professor, Dept. of Computer Science</p>
+            <p class="editor-affil">Università degli Studi di Milano, Italy<br /><em>Expertise: Artificial Intelligence,
+                Computational Intelligence, Biometrics, Intelligent Systems</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Rajkumar Buyya</p>
+            <p class="editor-role">Director, Cloud Computing and Distributed Systems Laboratory</p>
+            <p class="editor-affil">The University of Melbourne, Australia<br /><em>Expertise: Cloud Computing,
+                Distributed Systems, AI Infrastructure, High-Performance Computing</em></p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <span class="hero-btn" onclick="showPage('keynote')"
+            style="cursor: pointer; box-shadow: 0 4px 15px rgba(242, 41, 91, 0.2);">
+            View All Speakers
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              style="width: 18px; height: 18px; margin-left: 0.5rem; display: inline-block; vertical-align: middle;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEE DETAILS - PRESERVING THE BOX STRUCTURE -->
+    <section class="section" id="fees-section">
+      <div class="section-center">
+        <div class="fee-band-box reveal">
+          <h2>Paper Submission link</h2>
+          <div class="announced-badge">Under construction</div>
+
+        </div>
+      </div>
+    </section>
+
+
+  </div><!-- end #home page -->
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: KEYNOTE SPEAKERS                     -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="keynote" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Keynote Speakers
+        </h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">ETCPAMIS 2027 Eminent Speakers &amp; Experts</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-wide">
+        <h2 class="section-title">DISTINGUISHED <span>SPEAKERS</span></h2>
+        <div class="editors-grid reveal">
+          <div class="editor-card">
+            <p class="editor-name">Prof. N. Balakrishnan</p>
+            <p class="editor-role">Distinguished Professor, Department of Mathematics and Statistics</p>
+            <p class="editor-affil">McMaster University, Canada<br /><em>Expertise: Applied Mathematics, Statistical
+                Modelling, Reliability Engineering, Computational Statistics</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Kamesh Namuduri</p>
+            <p class="editor-role">Professor, Department of Electrical Engineering and Computer Science</p>
+            <p class="editor-affil">University of North Texas, USA<br /><em>Expertise: Intelligent Systems, AI, Edge
+                Computing, Autonomous Systems</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Vincenzo Piuri</p>
+            <p class="editor-role">Professor, Department of Computer Science</p>
+            <p class="editor-affil">Università degli Studi di Milano, Italy<br /><em>Expertise: Artificial Intelligence,
+                Computational Intelligence, Biometrics, Intelligent Systems</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Rajkumar Buyya</p>
+            <p class="editor-role">Director, Cloud Computing and Distributed Systems Laboratory</p>
+            <p class="editor-affil">The University of Melbourne, Australia<br /><em>Expertise: Cloud Computing,
+                Distributed Systems, AI Infrastructure, High-Performance Computing</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. S. Sadagopan</p>
+            <p class="editor-role">Founder Director</p>
+            <p class="editor-affil">IIIT Bangalore, India<br /><em>Expertise: Intelligent Information Systems, Data
+                Science, Digital Transformation, Computational Technologies</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Bhabatosh Chanda</p>
+            <p class="editor-role">Professor</p>
+            <p class="editor-affil">Indian Statistical Institute, Kolkata, India<br /><em>Expertise: Computer Vision,
+                Pattern Recognition, Mathematical Imaging, AI Applications</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. San Murugesan</p>
+            <p class="editor-role">Adjunct Professor</p>
+            <p class="editor-affil">Western Sydney University, Australia<br /><em>Expertise: Sustainable Computing,
+                Green Technologies, Digital Transformation, Emerging Technologies</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Daniel Thalmann</p>
+            <p class="editor-role">Director, Institute for Media Innovation</p>
+            <p class="editor-affil">Nanyang Technological University, Singapore<br /><em>Expertise: Intelligent Virtual
+                Systems, Simulation Technologies, AI and Human Interaction</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. Jiankun Hu</p>
+            <p class="editor-role">Professor, School of Engineering and Information Technology</p>
+            <p class="editor-affil">The University of New South Wales, Australia<br /><em>Expertise: Artificial
+                Intelligence, Machine Learning, Cyber Security, Intelligent Systems</em></p>
+          </div>
+          <div class="editor-card">
+            <p class="editor-name">Prof. George Ghinea</p>
+            <p class="editor-role">Professor, Department of Computer Science</p>
+            <p class="editor-affil">Brunel University London, United Kingdom<br /><em>Expertise: Intelligent Systems,
+                Human-Computer Interaction, Multimedia Computing, Educational Technologies</em></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: ABOUT                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="about-page" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div style="position:relative; min-height:35vh; overflow:hidden;">
+      <img src="pic_5.JPG.jpeg" alt="SRM IST Tiruchirappalli Campus"
+        style="position:absolute;inset:0;width:100%;height:150%;object-fit:cover;filter:brightness(.45);"
+        onerror="this.src='https://placehold.co/1200x600/0A075F/ffffff?text=SRM+IST+Tiruchirappalli+Campus'" />
+      <div
+        style="position:relative;z-index:1;display:flex;align-items:center;justify-content:center;min-height:35vh; background:linear-gradient(112deg,rgba(0,33,96,.75) 28%,rgba(242,41,91,.6) 100%);">
+        <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+          <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">About ETCPAMIS
+            2027</h1>
+          <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Emerging Trends in Computational Physics, Applied
+            Mathematics and Intelligent Systems</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-detail-content">
+      <h2>About ETCPAMIS 2027</h2>
+      <p>The International Conference on Emerging Trends in Computational Physics, Applied Mathematics and Intelligent
+        Systems (ETCPAMIS 2027) aims to provide a premier interdisciplinary platform for academicians, researchers,
+        scientists, industry professionals, and students to present and discuss recent advancements, innovative
+        methodologies, and emerging research trends in Computational Physics, Applied Mathematics, Scientific Computing,
+        Artificial Intelligence, and Intelligent Systems.</p>
+      <p>The conference seeks to foster collaboration among academia, research institutions, and industries by
+        encouraging the exchange of novel ideas, scientific discoveries, computational techniques, and technological
+        innovations that address real-world scientific and engineering challenges. The conference will focus on the
+        emerging trends and interdisciplinary applications of Computational Physics, Applied Mathematics, Scientific
+        Computing, and Intelligent Systems in addressing complex scientific, engineering, and technological challenges.
+      </p>
+      <p>The conference further aims to promote high-quality research in areas such as mathematical modelling,
+        computational simulations, quantum computing, physics-informed artificial intelligence, intelligent automation,
+        scientific data analytics, sustainable technologies, and interdisciplinary intelligent systems. Through keynote
+        lectures, technical sessions, and scholarly interactions, ETCPAMIS 2027 aspires to contribute significantly to
+        scientific advancement, technological innovation, and global research collaboration in emerging computational
+        and intelligent technologies.</p>
+
+      <h2>About our University </h2>
+      <p>SRM Institute of Science and Technology is one of India's leading multidisciplinary higher education
+        institutions, recognized for its excellence in teaching, research, innovation, and industry engagement.
+        Established with a vision to impart quality education and foster technological advancement, SRMIST offers a
+        comprehensive range of undergraduate, postgraduate, doctoral, and post-doctoral programs across diverse
+        disciplines, including Engineering and Technology, Management, Medicine and Health Sciences, Science and
+        Humanities, Law, Agricultural Sciences, and Allied Health Sciences. In NIRF 2025, SRMIST achieved the 22nd rank
+        in the Overall category and 11th among universities in India, demonstrating its strong commitment to quality
+        higher education and research excellence.
+
+      </p>
+      <br>
+      <p>The institution has a strong academic ecosystem supported by highly qualified faculty members, state-of-the-art
+        laboratories, modern research facilities, innovation centers, and extensive industry collaborations. SRMIST
+        continuously promotes interdisciplinary research and entrepreneurship through partnerships with leading
+        universities, research organizations, and industries across the globe. The university attracts students from all
+        over India and numerous countries, creating a vibrant multicultural learning environment. With campuses located
+        in Kattankulathur (Chennai), Ramapuram, Vadapalani, Tiruchirappalli, Modinagar, Sonepat, Amaravati, and Gangtok,
+        SRMIST has established itself as a center of excellence for higher education and research. The institution
+        consistently emphasizes outcome-based education, innovation-driven learning, global exposure, and societal
+        impact, preparing graduates to become competent professionals, researchers, and leaders in their respective
+        domains.
+      </p>
+
+      <img src="pic_5.JPG.jpeg" alt="SRM IST Tiruchirappalli "
+        style="width: 100%; height: auto; max-height: 250px; object-fit: contain; border-radius: 8px; margin: 1.5rem 0;"
+        onerror="this.src='https://placehold.co/1200x400/002160/ffffff?text=SRM+IST+Tiruchirappalli'" />
+
+      <h2>About SRM IST Tiruchirappalli</h2>
+      <p>SRM Institute of Science and Technology (SRMIST), Tiruchirappalli, is a premier, multi-disciplinary campus
+        under the renowned SRM Group. Holding the prestigious NAAC A++ accreditation, the university is widely
+        recognized for its high academic standards and excellence. The campus features ultra-modern, fully
+        air-conditioned infrastructure, advanced laboratories, and a state-of-the-art 1,500-seat auditorium. It serves
+        as a leading hub for research, innovation, and global knowledge exchange in the region. The institution fosters
+        deep industry-academia collaborations by frequently hosting national and international conferences and
+        workshops. Dedicated to holistic education, it provides diverse programs spanning engineering, management,
+        science, and humanities. Its lush, eco-friendly environment offers an inspiring and ideal setting for scholars
+        and experts to connect. The campus also offers robust residential facilities and comprehensive transportation
+        links across the city. By blending cutting-edge technology with quality teaching, it prepares students to meet
+        global professional challenges. Ultimately, SRMIST Trichy stands as a world-class venue dedicated to advancing
+        scientific and technical research.</p>
+      <img src="cse.png" alt="SRM IST Tiruchirappalli Department of CSE"
+        style="width: 100%; height: auto; max-height: 250px; object-fit: contain; border-radius: 8px; margin: 1.5rem 0;"
+        onerror="this.src='https://placehold.co/1200x400/002160/ffffff?text=Department+of+CSE'" />
+
+      <h2>About the Department of CSE</h2>
+      <p>The Department of Computer Science and Engineering at SRM Institute of Science and Technology, Tiruchirappalli,
+        was established in 2021 with the vision of imparting quality education and fostering innovation in the field of
+        computing. The department is committed to developing competent professionals through a curriculum that combines
+        strong theoretical foundations with practical and industry-oriented learning.</p>
+      <br>
+      <p>
+        The department offers a vibrant academic environment supported by experienced faculty members, modern computing
+        laboratories, advanced software tools, and state-of-the-art infrastructure. It actively promotes research and
+        innovation in emerging areas such as Artificial Intelligence, Machine Learning, Data Science, Cyber Security,
+        Cloud Computing, and the Internet of Things.
+      </p><br>
+      <p>
+        To bridge the gap between academia and industry, the department collaborates with leading organizations through
+        internships, workshops, expert talks, certification programs, and industry-driven projects. Students are
+        encouraged to participate in research activities, hackathons, technical competitions, and entrepreneurial
+        initiatives. The department strives to nurture technically skilled, ethically responsible, and globally
+        competent graduates capable of addressing real-world challenges and contributing to technological advancement.
+      </p>
+      </p>
+      <h3>Vision</h3>
+      <div class="about-vision-item">
+        <span class="tick-icon">✓</span>
+        <p>To emerge as a globally recognized center of excellence in Computer Science and Engineering by fostering
+          innovative research, interdisciplinary scientific advancements, computational intelligence, and sustainable
+          technological solutions that contribute to societal development, scientific discovery, and global academic
+          excellence.</p>
+      </div>
+
+      <h3>Mission</h3>
+      <div class="about-vision-item">
+        <span class="tick-icon">✓</span>
+        <p>To promote excellence in Computer Science and Engineering education through interdisciplinary research,
+          intelligent systems, scientific computing, innovation-driven learning, and industry collaboration while
+          emphasizing ethical responsibility, sustainability, and societal impact.</p>
+      </div>
+
+      <!-- Conference Objectives has been moved to the home page -->
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: PUBLICATION (NEW)                    -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="publication" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Publication &amp;
+          Indexing</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Official Archival and Proceedings Information</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-center">
+        <div
+          style="background: #ffffff; border-radius: 16px; padding: 3rem 2rem; border: 1px solid var(--gray-300); box-shadow: 0 10px 30px rgba(0,0,0,0.04); text-align: center;">
+          <span style="font-size: 3.5rem; display: block; margin-bottom: 1.5rem;">📖</span>
+          <h2
+            style="font-family: var(--font-head); font-size: 1.8rem; font-weight: 700; color: var(--blue9); margin-bottom: 1.5rem;">
+            Publication &amp; Indexing</h2>
+          <p
+            style="font-size: 1.15rem; line-height: 1.8; color: var(--gray-800); max-width: 750px; margin: 0 auto; font-weight: 500;">
+            All accepted and registered papers will be included in the conference proceedings that will be published by
+            AIP (Waiting for approval).
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: REGISTRATION                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="registration" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Registration</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">ETCPAMIS 2027 · 15–16 April 2027</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-center pub-section">
+        <h3>Paper Submission Instructions</h3>
+        <p>While preparing your manuscript, we recommend using the AIP template. Short papers: 9–11 pages. Long papers:
+          12–15 pages.</p>
+        <br>
+        <h3>Review Process</h3>
+        <ul class="reg-guidelines">
+          <li><span class="reg-tick">✓</span>All submitted manuscripts will undergo a rigorous full-paper double-blind
+            peer-review process.</li>
+          <li><span class="reg-tick">✓</span>Screened submissions undergo an initial quality check through plagiarism
+            detection software (similarity index must be below 5%).</li>
+          <li><span class="reg-tick">✓</span>Manuscripts are then sent for single-blind review by three independent
+            referees.</li>
+          <li><span class="reg-tick">✓</span>A consensus of at least two of three reviewers is mandatory for acceptance.
+          </li>
+          <li><span class="reg-tick">✓</span>One reviewer will not review more than three manuscripts in a single cycle.
+          </li>
+        </ul>
+        <br>
+        <h3>Publication &amp; Indexing</h3>
+        <p>All accepted and registered papers will be published in the conference proceedings (subject to approval).</p>
+        <br>
+        <h3>Best Paper Award</h3>
+        <p>One paper from each of the 10 tracks will be selected as Best Paper. Awards will be announced at the
+          culmination of the conference.</p>
+        <br>
+        <h3>Registration Guidelines</h3>
+        <ul class="reg-guidelines">
+          <li><span class="reg-tick">✓</span>For each accepted paper, at least one of the authors must register for the
+            conference.</li>
+          <li><span class="reg-tick">✓</span>One registration in the Student category allows one paper
+            presentation/publication.</li>
+          <li><span class="reg-tick">✓</span>One registration in the Faculty category allows two paper
+            presentations/publications (provided both have been accepted upon peer review).</li>
+          <li><span class="reg-tick">✓</span>Registration in the Author's Registration Category is mandatory for the
+            presentation of the paper in the conference.</li>
+          <li><span class="reg-tick">✓</span>Included: paper in conference proceedings.</li>
+          <li><span class="reg-tick">✓</span>Other authors may register as co-authors if at least one author has already
+            registered in the author category.</li>
+        </ul>
+
+        <br>
+        <h3 style="margin-top:2rem;">Registration and Pricing</h3>
+        <div class="reg-table-wrap">
+          <table class="reg-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Student / Research Scholar</th>
+                <th>Faculty / Academician</th>
+                <th>Industry Professional</th>
+                <th>Co-Author / Attendee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Category"><strong>Authors from India (INR)</strong></td>
+                <td data-label="Student / Research Scholar">16500</td>
+                <td data-label="Faculty / Academician">12000</td>
+                <td data-label="Industry Professional">12000</td>
+                <td data-label="Co-Author / Attendee">2000</td>
+              </tr>
+              <tr>
+                <td data-label="Category"><strong>Authors from outside India (USD)</strong></td>
+                <td data-label="Student / Research Scholar">170</td>
+                <td data-label="Faculty / Academician">200</td>
+                <td data-label="Industry Professional">200</td>
+                <td data-label="Co-Author / Attendee">65</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="reg-note">Note: Authors would be able to avail an early bird discount of 10% on the above mentioned
+            registration fee if they register before the early bird deadline.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: ADVISORY BOARD                       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="advisory" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Advisory Board
+        </h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">ETCPAMIS 2027 Scientific &amp; Technical Committee
+        </p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-wide">
+        <div
+          style="background: #f9fafb; border-left: 4px solid var(--pink); padding: 1.5rem; margin: 0 auto 2.5rem; border-radius: 0 8px 8px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.02); max-width: 1000px; text-align: left;">
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--gray-800); margin-bottom: 0.75rem;">
+            Back in 2003, SRM set up an International Advisory Board (IAB) consisting of 31 Distinguished Deans,
+            Directors and professors from top universities across the world. SRM's IAB is the first across the Indian
+            University system. IAB works towards helping SRMIST set Global Standards and Internationalize through
+            bringing globally acclaimed curriculum, research and teaching methodology to its students and faculty
+            members.
+          </p>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--gray-800); margin: 0;">
+            Now over 50+ Members are on IAB and they are from the best of the universities across the world including
+            Harvard Business School, Kennedy Public School (Harvard University), MIT, Stanford, LSE, UC Berkeley,
+            Cambridge, NUS among others.
+          </p>
+        </div>
+
+        <h2 class="section-title">CONFERENCE <span>ADVISORY BOARD</span></h2>
+
+        <div class="tab-bar">
+          <button class="tab-btn active" onclick="switchTab(this,'intl')">International Board</button>
+          <button class="tab-btn" onclick="switchTab(this,'national')">National Board</button>
+        </div>
+
+        <div id="tab-intl" class="tab-panel active">
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. Jiankun Hu</p>
+              <p class="board-uni">The University of New South Wales</p>
+              <p class="board-country">Australia</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Osvaldo Gervasi</p>
+              <p class="board-uni">University of Perugia</p>
+              <p class="board-country">Italy</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Tunde Olabiyisi</p>
+              <p class="board-uni">Ladoke Akintola University of Technology</p>
+              <p class="board-country">Nigeria</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. George Ghinea</p>
+              <p class="board-uni">Brunel University</p>
+              <p class="board-country">United Kingdom</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Rahim Tafazolli</p>
+              <p class="board-uni">University of Surrey</p>
+              <p class="board-country">United Kingdom</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Chua Sook Ling</p>
+              <p class="board-uni">Multimedia University</p>
+              <p class="board-country">Malaysia</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Atma Sahu</p>
+              <p class="board-uni">Coppin State University</p>
+              <p class="board-country">USA</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. PaO-Ann Hsiung</p>
+              <p class="board-uni">National Chung Cheng University</p>
+              <p class="board-country">Taiwan</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Hadi Susanto</p>
+              <p class="board-uni">Khalifa University</p>
+              <p class="board-country">UAE</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Girijesh Prasad</p>
+              <p class="board-uni">Ulster University</p>
+              <p class="board-country">United Kingdom</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Kawal Sawhney</p>
+              <p class="board-uni">University of Oxford</p>
+              <p class="board-country">United Kingdom</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Zhenlu Cui</p>
+              <p class="board-uni">Fayetteville State University</p>
+              <p class="board-country">USA</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Stefano Mariani</p>
+              <p class="board-uni">University of Milan</p>
+              <p class="board-country">Italy</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-national" class="tab-panel">
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. S. Thamarai Selvi</p>
+              <p class="board-uni">Thiruvalluvar University, Vellore</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. P. Yogesh</p>
+              <p class="board-uni">Anna University, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R N Kulkarni</p>
+              <p class="board-uni">Ballari Institute of Technology &amp; Management, Ballari</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. A. Amuthan</p>
+              <p class="board-uni">Puducherry Technological University, Puducherry</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. S. Mary Saira Bhanu</p>
+              <p class="board-uni">National Institute of Technology, Tiruchirappalli</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. Rajesh</p>
+              <p class="board-uni">Central University of Kerala, Kerala</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. Baskaran</p>
+              <p class="board-uni">Anna University, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. PJA Alphonse</p>
+              <p class="board-uni">National Institute of Technology, Tiruchirappalli</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. S. Bhuvaneswaran</p>
+              <p class="board-uni">Anna University, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. Dhanalakshmi</p>
+              <p class="board-uni">IIIT, Tiruchirappalli</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. Bala venkata Subramanyam</p>
+              <p class="board-uni">National Institute of Technology, Warangal</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Pandiri Venkatesh</p>
+              <p class="board-uni">IIITDM Kancheepuram, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. C. Valliamma</p>
+              <p class="board-uni">Anna University, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Ponsy. R. K. Sathiyabama</p>
+              <p class="board-uni">Anna University, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. V. Akila</p>
+              <p class="board-uni">Puducherry Technological University, Puducherry</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. S.Janakiraman</p>
+              <p class="board-uni">Pondicherry University, Pondicherry</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. J. Arul Valan</p>
+              <p class="board-uni">National Institute of Technology, Nagaland</p>
+              <p class="board-country">India</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. K. Kathiravan</p>
+              <p class="board-uni">SRM Group of Institutions, Ramapuram Campus, Chennai</p>
+              <p class="board-country">India</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: ORGANISING COMMITTEE                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="committee" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Organising
+          Committee</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">ETCPAMIS 2027 Organizing Leadership &amp; Committee
+          Members</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-wide">
+        <!-- Vice Patron -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">VICE <span>PATRONS</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. T. R. Paarivendhar</p>
+              <p class="board-uni">Founder, SRM Group of Educational Institutions</p>
+              <p class="board-country">SRMIST</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. Shivakumar</p>
+              <p class="board-uni">Chairman, SRM Group of Educational Institutions (Ramapuram &amp; Trichy Campus)</p>
+              <p class="board-country">SRMIST</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Mr. S. Niranjan</p>
+              <p class="board-uni">Co-Chairman, SRM Group of Educational Institutions (Ramapuram &amp; Trichy Campus)
+              </p>
+              <p class="board-country">SRMIST</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chief Patron -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">CHIEF <span>PATRONS</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. Md. Sameeruddin Khan</p>
+              <p class="board-uni">Pro Vice-Chancellor, SRM Group of Educational Institutions, Trichy Campus</p>
+              <p class="board-country">SRMIST</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. N. Malmurugan</p>
+              <p class="board-uni">Director, SRM Group of Educational Institutions, Tiruchirappalli Campus</p>
+              <p class="board-country">SRMIST</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patron -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title"><span>PATRON</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. R. Jagadeesh Kannan</p>
+              <p class="board-uni">Dean, Faculty of Engineering and Technology</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conference Chair -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">CONFERENCE <span>CHAIR</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card" style="border:2px solid var(--pink);">
+              <p class="board-name">Dr. S. Kanaga Suba Raja</p>
+              <p class="board-uni">Professor and Head, Department of Computer Science and Engineering</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Chair -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">TECHNICAL <span>CHAIR</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. S. Kanaga Suba Raja</p>
+              <p class="board-uni">Professor &amp; HoD</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. P. Senthilkumar</p>
+              <p class="board-uni">Associate Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. K. Sathish Kumar</p>
+              <p class="board-uni">Associate Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. R. Siva Subramanian</p>
+              <p class="board-uni">Associate Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Rahul Shrivastava</p>
+              <p class="board-uni">Associate Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conference Treasurers -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">CONFERENCE <span>TREASURERS</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Mr. J. Paul Rajasingh</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. K. R. Saranya</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. S. Sivakumar</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. L. Josephine Usha</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Ms. R. Sharanya</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. P. Shanmuga Sundari</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. N. Saranya</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Committee Members -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">COMMITTEE <span>MEMBERS</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">Dr. V. Mani</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. S. Rahmath Nisha</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. S. Sakthivel</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Ajeyprasaath K. B.</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Mr. Nareshkumar R</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. M. Muthukumar</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. J. Jegan</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. P. Hariharan</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. S. Shargunam</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Deena Rose</p>
+              <p class="board-uni">Assistant Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">Dr. Dhanasekaran K</p>
+              <p class="board-uni">Associate Professor</p>
+              <p class="board-country">SRMIST Tiruchirappalli</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Organising Committee -->
+        <div style="margin-bottom:3rem;">
+          <h2 class="section-title">STUDENT <span>ORGANISERS</span></h2>
+          <div class="board-grid reveal">
+            <div class="board-card">
+              <p class="board-name">YUVASRI N</p>
+              <p class="board-uni">III CSE A</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">AISHWARYA C</p>
+              <p class="board-uni">III CSE A</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">SELVA P</p>
+              <p class="board-uni">III CSE A</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">NIRANJANI A</p>
+              <p class="board-uni">IV CSE B</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">DEVADHARSHNI S</p>
+              <p class="board-uni">III CSE B</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">KEERTHANAA SRI M</p>
+              <p class="board-uni">III CSE B</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">SRIRAM M</p>
+              <p class="board-uni">III CSE B</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">PAYAL AJAY</p>
+              <p class="board-uni">III CSE D</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">HARSHVARDHAN SINGH</p>
+              <p class="board-uni">III CSE D</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">VANSH PRADHAN</p>
+              <p class="board-uni">IV CSE D</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">AYUSH THAKUR</p>
+              <p class="board-uni">III CSE D</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">DEVULAPALLY VYSHNAVI</p>
+              <p class="board-uni">III CSE E</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">LEENASRI S Y</p>
+              <p class="board-uni">III CSE E</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">ISAI MANI C</p>
+              <p class="board-uni">III CSE E</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">V CHARAN</p>
+              <p class="board-uni">III CSE F</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">PIDAPARTHI VISHNUVARDHAN REDDY</p>
+              <p class="board-uni">IV CSE F</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">DIVYAANAND CHANDRASEKARAN</p>
+              <p class="board-uni">IV CSE F</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">SIVAPRASAD R</p>
+              <p class="board-uni">II CSE H</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">S HEMAVARSHINI</p>
+              <p class="board-uni">II CSE H</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">SIVADHARSHINI P</p>
+              <p class="board-uni">II CSE H</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+            <div class="board-card">
+              <p class="board-name">ROSHIDA R</p>
+              <p class="board-uni">II CSE H</p>
+              <p class="board-country">Student Organiser</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: TRAVEL GUIDE                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="travel-guide" class="page-section">
+    <div style="height:4.5rem;"></div>
+
+    <div class="travel-hero-overlay">
+      <div style="text-align:center; color:#fff; padding:2.5rem 1.5rem; max-width:800px; z-index:5;">
+        <span
+          style="display:inline-block; background:rgba(255,197,58,0.2); border:1px solid var(--yellow); border-radius:99px; padding:0.25rem 1rem; font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.75rem; color:var(--yellow);">
+          Conference Destination
+        </span>
+        <h1 style="font-size:clamp(1.5rem, 5vw, 2.5rem); font-weight:700; font-family:var(--font-head);">Explore
+          Tiruchirappalli</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.9;">
+          A comprehensive overview of Tiruchirappalli's historical heritage, scenic spots, architectural wonders, and
+          cultural backdrop for incoming delegates.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-wide">
+
+        <!-- Historic & Geographic Introduction Grid -->
+        <div class="travel-intro-grid reveal">
+          <div class="travel-intro-card">
+            <h3>
+              <span style="color:var(--pink);">🏛️</span> Historical Significance
+            </h3>
+            <p>
+              Tiruchirappalli, commonly known as Trichy, has a rich historical legacy dating back over two millennia.
+              Once a prominent stronghold of the ancient Chola dynasty, Trichy flourished magnificently under the
+              subsequent rule of the Nayak dynasty. Iconic landmarks such as the majestic Rockfort Temple and the grand
+              Ranganathaswamy Temple in Srirangam bear timeless testament to the city's ancient heritage, strategic
+              defensive architecture, and breathtaking temple masterworks.
+            </p>
+          </div>
+          <div class="travel-intro-card">
+            <h3>
+              <span style="color:var(--yellow);">🗺️</span> Geographical Features
+            </h3>
+            <p>
+              Nestled amidst the scenic beauty of Tamil Nadu, Tiruchirappalli boasts of the majestic Cauvery River
+              flowing through its heart. The city is uniquely characterized by its soaring rocky outcrops and lush
+              greenery, creating a picturesque contrast for its urban landscape. The surrounding agricultural basin
+              contributes significantly to the state's agriculture, with vibrant green rice paddies and banana groves
+              dotting the beautiful countryside.
+            </p>
+          </div>
+        </div>
+
+        <!-- Grid 1: Primary Places to Visit -->
+        <h2 class="section-title">PRIMARY <span>PLACES TO VISIT</span></h2>
+        <div class="travel-places-grid reveal" style="margin-bottom: 4rem;">
+
+          <div class="travel-item-card-no-pic theme-gold">
+            <span class="travel-card-badge">Heritage &amp; Temple</span>
+            <h4><span>🕉️</span> Ranganathaswamy Temple</h4>
+            <p>One of the largest functioning Hindu temples in the world, dedicated to Lord Ranganatha (an incarnation
+              of Lord Vishnu). Spread across a massive 156-acre complex with towering architectural gopurams.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-pink">
+            <span class="travel-card-badge">Landmark Fort</span>
+            <h4><span>🏰</span> Rockfort Temple</h4>
+            <p>A historic fortress built on an 83-meter high ancient rock structure. Houses ancient Pallava-era rock-cut
+              cave shrines and a summit temple offering panoramic views of the entire urban landscape.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-gold">
+            <span class="travel-card-badge">Island Heritage</span>
+            <h4><span>🏝️</span> Srirangam Island</h4>
+            <p>A picturesque river island bounded by the Cauvery and Kollidam rivers. Home to the legendary temple
+              complex, a critical pilgrimage site in South India, and unique traditional settlements.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-blue">
+            <span class="travel-card-badge">Ancient Engineering</span>
+            <h4><span>🌊</span> Kallanai Dam</h4>
+            <p>An ancient water-diversion structure built across the Kaveri River by King Karikala Chola in the 2nd
+              century AD. Celebrated globally as one of the oldest functioning irrigation systems.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-gold">
+            <span class="travel-card-badge">Divine Architecture</span>
+            <h4><span>🔱</span> Jambukeswarar Temple</h4>
+            <p>A historic Shiva temple representing the water element (Pancha Bhoota Stalam). Famous for its majestic
+              architectural corridors and an active fresh spring under the primary deity.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-purple">
+            <span class="travel-card-badge">Colonial Monument</span>
+            <h4><span>⛪</span> St. Joseph's Church</h4>
+            <p>An elegant, soaring colonial-era Gothic cathedral constructed in 1840. Renowned for its tall spire,
+              intricate stained-glass panels, and serene sanctuary situated in the center of town.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-purple">
+            <span class="travel-card-badge">Museum &amp; Art</span>
+            <h4><span>🏺</span> Government Museum</h4>
+            <p>A repository of rich anthropological and geological relics. Showcases Pallava and Chola bronzes, ancient
+              stone sculptures, and historic models of the region's cultural past.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-gold">
+            <span class="travel-card-badge">Hill Temple</span>
+            <h4><span>🦚</span> Viralimalai Murugan Temple</h4>
+            <p>Perched atop a natural rocky hill, this ancient temple dedicated to Lord Murugan is surrounded by a
+              scenic sanctuary populated by peacocks, delivering spiritual and aesthetic peace.</p>
+          </div>
+
+        </div>
+
+        <!-- Grid 2: Tourist Attractions -->
+        <h2 class="section-title">SCENIC &amp; <span>TOURIST ATTRACTIONS</span></h2>
+        <div class="travel-places-grid reveal" style="margin-bottom: 4rem;">
+
+          <div class="travel-item-card-no-pic theme-blue">
+            <span class="travel-card-badge">Scenic Reservoir</span>
+            <h4><span>🌅</span> Teppakulam</h4>
+            <p>A massive, historically constructed square temple tank with a beautiful central mandapam. Hosts the
+              colorful annual float festival under brilliant lights in the evening.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-green">
+            <span class="travel-card-badge">Nature Park</span>
+            <h4><span>🦋</span> Butterfly Park</h4>
+            <p>Spanning 35 acres, this spectacular park features beautiful botanical gardens, walking trails, an active
+              breeding conservatory, and peaceful spots ideal for nature enthusiasts.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-gold">
+            <span class="travel-card-badge">Archeological Cave</span>
+            <h4><span>🎨</span> Kudumiyanmalai Temple</h4>
+            <p>An ancient rock-cut monument decorated with rare carvings and historical inscriptions, representing
+              ancient South Indian musical systems and early structural craftsmanship.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-green">
+            <span class="travel-card-badge">Natural Valley</span>
+            <h4><span>🏞️</span> Puliyancholai Waterfalls</h4>
+            <p>A tranquil stream cascade nestled inside forest valleys at the foot of the Kolli Hills. Perfect for
+              trekking, nature trails, and spending a quiet afternoon away from urban noise.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-blue">
+            <span class="travel-card-badge">Recreation Picnic</span>
+            <h4><span>🌳</span> Mukkombu (Upper Anaicut)</h4>
+            <p>A scenic dam spot where the Cauvery river forks beautifully. Features manicured riverside parks,
+              children's playgrounds, and cool river breeze making it a popular family spot.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-purple">
+            <span class="travel-card-badge">Science &amp; Space</span>
+            <h4><span>🚀</span> Anna Science Centre Planetarium</h4>
+            <p>An immersive scientific hub featuring an active planetarium theater, 3D show galleries, hands-on
+              scientific projects, and an interactive park for tech and space enthusiasts.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-blue">
+            <span class="travel-card-badge">Sacred Ghat</span>
+            <h4><span>🪔</span> Amma Mandapam Bathing Ghat</h4>
+            <p>A historical stone-carved bathing ghat directly lining the Cauvery River. Frequented by pilgrims
+              participating in traditional prayer routines and sacred rituals.</p>
+          </div>
+
+          <div class="travel-item-card-no-pic theme-gold">
+            <span class="travel-card-badge">Historic Epigraphy</span>
+            <h4><span>📝</span> Rock Inscriptions of Ucchi Pillayar</h4>
+            <p>Intricate, centuries-old royal inscriptions and engravings carved directly along the stone pathways
+              leading to the summit fortress temple, outlining ancient local annals.</p>
+          </div>
+
+        </div>
+
+        <!-- Grid 3: Culture & Modern Overview -->
+        <div class="travel-intro-grid reveal" style="margin-top:2rem;">
+          <div class="travel-intro-card" style="border-top: 4px solid var(--pink);">
+            <h3>🎭 Cultural Heritage</h3>
+            <p>
+              Trichy is a vibrant tapestry of religious diversity and cultural richness. Magnificently structured
+              temples, ancient mosques, and classic Gothic churches coexist harmoniously, reflecting the city's
+              cosmopolitan history. Traditional festivals like Pongal, Diwali, and Eid are celebrated with immense
+              fervor, with colorful local street processions, classic musical performances, and elaborate temple
+              rituals. Trichy's world-class bronze idol sculpture crafts and high-quality handloom silk sarees highlight
+              the profound talent of local artisans.
+            </p>
+          </div>
+          <div class="travel-intro-card" style="border-top: 4px solid var(--yellow);">
+            <h3>⚡ Modern Development</h3>
+            <p>
+              Trichy beautifully balances its deep historical roots with rapid technical advancement. Elite academic
+              pillars like the National Institute of Technology (NIT Trichy), IIM Trichy, and Bharathidasan University
+              drive innovation. Strategically located in central Tamil Nadu, the city boasts high-quality transport
+              networks. Trichy International Airport (TRZ) connects travelers to global routes, and its massive central
+              railway hub bridges transit across India.
+            </p>
+          </div>
+        </div>
+
+        <!-- Conclusion Strip -->
+        <div class="reveal"
+          style="background:var(--neutral-100); border-radius:12px; padding:2rem; text-align:center; margin-top:3rem; border-left: 6px solid var(--navy);">
+          <h3
+            style="font-family:var(--font-head); font-size:1.25rem; font-weight:700; color:var(--navy); margin-bottom:.5rem;">
+            Destination Summary</h3>
+          <p style="font-size:.95rem; line-height:1.7; color:var(--gray-600); max-width:850px; margin:0 auto;">
+            Trichy, with its harmonious blend of history, culture, and modernity, offers a captivating tapestry of
+            experiences for visitors and residents alike. Whether exploring ancient temple corridors, lively handloom
+            bazaars, or scenic riverbeds, Trichy inspires all who step foot here.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: DOWNLOADS                            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="downloads" class="page-section">
+    <div style="height:4.5rem;"></div>
+
+    <div class="travel-hero-overlay"
+      style="min-height: 25vh; background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%);">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem; z-index:5;">
+        <span
+          style="display:inline-block; background:rgba(255,197,58,0.2); border:1px solid var(--yellow); border-radius:99px; padding:0.25rem 1rem; font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.75rem; color:var(--yellow);">
+          Author Center
+        </span>
+        <h1 style="font-size:clamp(1.5rem, 5vw, 2.5rem); font-weight:700; font-family:var(--font-head);">Conference
+          Downloads</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.9;">
+          Access official manuscript guidelines, document templates, and checklists for preparing your final
+          camera-ready work.
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-center">
+        <h2 class="section-title">AUTHOR <span>RESOURCES &amp; TEMPLATES</span></h2>
+        <p
+          style="text-align:center; margin-bottom:2.5rem; font-size:.95rem; color:var(--gray-600); max-width:700px; margin-left:auto; margin-right:auto;">
+          Please prepare your manuscripts in accordance with the templates provided below to ensure seamless publication
+          in the AIP Conference Proceedings.
+        </p>
+
+        <div
+          style="box-shadow: 0 4px 15px rgba(0,0,0,0.04); border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-200); background: #fff; padding: 0.5rem;">
+          <table class="downloads-table">
+            <thead>
+              <tr>
+                <th
+                  style="padding: 1rem; font-size: 0.95rem; background: var(--gray-200); width: 60%; text-align: left;">
+                  Resource / Template Name</th>
+                <th
+                  style="padding: 1rem; font-size: 0.95rem; background: var(--gray-200); text-align: center; width: 15%;">
+                  Format</th>
+                <th
+                  style="padding: 1rem; font-size: 0.95rem; background: var(--gray-200); text-align: center; width: 25%;">
+                  Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Resource / Template Name" style="padding: 1.25rem 1rem;">
+                  <div style="display: flex; align-items: start; gap: 0.75rem;">
+                    <span style="font-size: 1.5rem; line-height: 1;">📋</span>
+                    <div>
+                      <strong
+                        style="color: var(--blue9); font-size: 1rem; display: block; margin-bottom: 0.25rem;">Checklist</strong>
+                      <span
+                        style="font-size: 0.85rem; color: var(--gray-600); display: block; line-height: 1.4;">Mandatory
+                        compliance checklist to verify formatting guidelines, submission metadata, and ethical
+                        declarations before uploading your manuscript.</span>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Format" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <span
+                    style="background: rgba(242,41,91,0.1); color: var(--pink); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">PDF</span>
+                </td>
+                <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <a href="checklist.pdf" download class="hero-btn"
+                    style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
+                    Download
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                      style="stroke-width: 2.5;">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource / Template Name" style="padding: 1.25rem 1rem;">
+                  <div style="display: flex; align-items: start; gap: 0.75rem;">
+                    <span style="font-size: 1.5rem; line-height: 1;">📝</span>
+                    <div>
+                      <strong
+                        style="color: var(--blue9); font-size: 1rem; display: block; margin-bottom: 0.25rem;">Manuscript
+                        Guidelines</strong>
+                      <span
+                        style="font-size: 0.85rem; color: var(--gray-600); display: block; line-height: 1.4;">Official
+                        publisher guidelines describing absolute page limits, margin measurements, font configurations,
+                        abstract rules, and indexing details.</span>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Format" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <span
+                    style="background: rgba(242,41,91,0.1); color: var(--pink); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">PDF</span>
+                </td>
+                <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <a href="Manuscript_Guidelines.pdf" download class="hero-btn"
+                    style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
+                    Download
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                      style="stroke-width: 2.5;">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource / Template Name" style="padding: 1.25rem 1rem;">
+                  <div style="display: flex; align-items: start; gap: 0.75rem;">
+                    <span style="font-size: 1.5rem; line-height: 1;">📁</span>
+                    <div>
+                      <strong style="color: var(--blue9); font-size: 1rem; display: block; margin-bottom: 0.25rem;">AIP
+                        Word Template</strong>
+                      <span
+                        style="font-size: 0.85rem; color: var(--gray-600); display: block; line-height: 1.4;">Authorized
+                        Microsoft Word layout model preconfigured with AIP standard margins, heading hierarchies,
+                        paragraph properties, and citation formats.</span>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Format" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <span
+                    style="background: rgba(30,58,138,0.1); color: var(--blue9); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">ZIP</span>
+                </td>
+                <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <a href="AIP_Word_Template.zip" download class="hero-btn"
+                    style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
+                    Download
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                      style="stroke-width: 2.5;">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td data-label="Resource / Template Name" style="padding: 1.25rem 1rem;">
+                  <div style="display: flex; align-items: start; gap: 0.75rem;">
+                    <span style="font-size: 1.5rem; line-height: 1;">📦</span>
+                    <div>
+                      <strong style="color: var(--blue9); font-size: 1rem; display: block; margin-bottom: 0.25rem;">AIP
+                        LaTeX Template</strong>
+                      <span
+                        style="font-size: 0.85rem; color: var(--gray-600); display: block; line-height: 1.4;">Comprehensive
+                        LaTeX package for AIP proceedings, complete with document styling classes, sample document
+                        files, bibliography schemes, and sample PDFs.</span>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Format" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <span
+                    style="background: rgba(30,58,138,0.1); color: var(--blue9); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">ZIP</span>
+                </td>
+                <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <a href="AIP_Latex_Template.zip" download class="hero-btn"
+                    style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
+                    Download
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                      style="stroke-width: 2.5;">
+                      <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: REACH US                             -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="reach-us" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div class="contact-wrap">
+      <div class="contact-card reveal">
+        <h2>Contact Information</h2>
+        <div class="contact-item">
+          <span class="contact-icon">👤</span>
+          <div><strong>Dr. S. Kanaga Suba Raja</strong><br />Professor and Head<br /><small>Conference Chair, ETCPAMIS
+              2027</small></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div><a href="tel:+919486684400">+91 94866 84400</a></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div><a href="mailto:Kanagasubaraja.s@ist.srmtrichy.edu.in">Kanagasubaraja.s@ist.srmtrichy.edu.in</a></div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            SRM Institute of Science and Technology<br />
+            Tiruchirappalli Campus<br />
+            Irungalur, Near Samayapuram Toll Plaza<br />
+            Tiruchirappalli 621105
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.148417952734!2d78.75147957504446!3d10.95215928920747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baafb9b231ae861%3A0xe015b4e7a6e2c2d6!2sSRM%20Institute%20of%20Science%20%26%20Technology%2C%20Tiruchirapalli%20Campus!5e0!3m2!1sen!2sin!4v1782577826347!5m2!1sen!2sin"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div>
+      <img src="logo_1.png" alt="SRM IST Logo" style="width: 150px; height: auto; margin-top: 2rem;"
+        title="SRM Institute of Science and Technology" />
+    </div>
+
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#"
+              onclick="showPage('home');document.getElementById('about').scrollIntoView({behavior:'smooth'})">› About
+              Conference</a></li>
+          <li><a href="#"
+              onclick="showPage('home');document.getElementById('dates').scrollIntoView({behavior:'smooth'})">›
+              Important Dates</a></li>
+          <li><a href="#" onclick="showPage('publication')">› Publication &amp; Indexing</a></li>
+          <li><a href="#" onclick="showPage('keynote')">› Keynote Speakers</a></li>
+          <li><a href="#" onclick="showPage('committee')">› Organising Committee</a></li>
+          <li><a href="#" onclick="showPage('advisory')">› Advisory Board</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#"
+              onclick="showPage('home');document.getElementById('callforpapers').scrollIntoView({behavior:'smooth'})">›
+              Call for Papers</a></li>
+          <li><a href="#" onclick="showPage('registration')">› Registration Guidelines</a></li>
+          <li><a href="#" onclick="showPage('registration')">› Online Registration</a></li>
+          <li><a href="#" onclick="showPage('travel-guide')">› Travel Guide</a></li>
+          <li><a href="#" onclick="showPage('downloads')">› Downloads</a></li>
+          <li><a href="#" onclick="showPage('reach-us')">› Reach Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <div class="footer-copy">
+      <p>Copyright © 2027 | SRM INSTITUTE OF SCIENCE AND TECHNOLOGY, TIRUCHIRAPPALLI</p>
+      <!-- <p style="margin-top:.35rem;">Developed by <a href="https://www.linkedin.com/in/shaktivel-t-k-803a75335/">Shaktivel</a></p> -->
+    </div>
+  </footer>
+
+  <script>
+    /* ─── PAGE SWITCHING ─── */
+    function showPage(id) {
+      document.querySelectorAll('.page-section').forEach(el => el.classList.remove('active-page'));
+      const target = document.getElementById(id);
+      if (target) { target.classList.add('active-page'); window.scrollTo(0, 0); }
+      document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(a => {
+        a.classList.toggle('active', a.dataset.page === id);
+      });
+      setTimeout(() => {
+        document.querySelectorAll('.reveal:not(.visible)').forEach(el => observer.observe(el));
+      }, 50);
+    }
+
+    /* ─── HAMBURGER ─── */
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobile-menu').classList.remove('open');
+    }
+    document.addEventListener('click', e => {
+      const nav = document.getElementById('navbar');
+      const menu = document.getElementById('mobile-menu');
+      if (!nav.contains(e.target) && !menu.contains(e.target)) closeMenu();
+    });
+
+    /* ─── ADVISORY BOARD TABS ─── */
+    function switchTab(btn, name) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + name).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    /* ─── SCROLL REVEAL ─── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ─── CAMPUS FULL-WIDTH SLIDESHOW LOGIC ─── */
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.campus-slide');
+    const totalSlides = slides.length;
+    let slideAutoplay;
+
+    function showNextSlide() {
+      if (totalSlides === 0) return;
+      slides[slideIndex].classList.remove('active');
+      slides[slideIndex].style.opacity = '0';
+      slides[slideIndex].style.zIndex = '0';
+
+      slideIndex = (slideIndex + 1) % totalSlides;
+
+      slides[slideIndex].classList.add('active');
+      slides[slideIndex].style.opacity = '1';
+      slides[slideIndex].style.zIndex = '1';
+    }
+
+    function startSlideAutoplay() {
+      slideAutoplay = setInterval(showNextSlide, 5000);
+    }
+
+    window.onload = function () {
+      startSlideAutoplay();
+
+      // Pause slideshow on hover
+      const sliderElement = document.querySelector('.campus-slider-section');
+      if (sliderElement) {
+        sliderElement.addEventListener('mouseenter', () => clearInterval(slideAutoplay));
+        sliderElement.addEventListener('mouseleave', startSlideAutoplay);
+      }
+    }
+  </script>
+</body>
+
+</html>
