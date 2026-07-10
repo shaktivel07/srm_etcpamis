@@ -1244,7 +1244,6 @@
     <a href="#" onclick="showPage('publication');closeMenu()" data-page="publication">Publication</a>
     <a href="#" onclick="showPage('submissions');closeMenu()" data-page="submissions">Submissions</a>
     <a href="#" onclick="showPage('guidelines');closeMenu()" data-page="guidelines">Guidelines</a>
-    <a href="#" onclick="showPage('registration');closeMenu()" data-page="registration">Registration</a>
     <a href="#" onclick="showPage('travel-guide');closeMenu()" data-page="travel-guide">Travel Guide</a>
     <a href="#" onclick="showPage('downloads');closeMenu()" data-page="downloads">Downloads</a>
     <a href="#" onclick="showPage('reach-us');closeMenu()" data-page="reach-us">Reach Us</a>
@@ -1300,14 +1299,16 @@
             SRM IST, Tiruchirappalli &nbsp;·&nbsp; Hybrid Mode
           </div>
         </div>
-        <span class="hero-btn" onclick="showPage('guidelines')">
-          Register
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </span>
+        
+        
         <span class="hero-btn" onclick="showPage('submissions')">
           Paper Submission
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg> <br>
+        </span>
+        <span class="hero-btn" onclick="showPage('guidelines')">
+          Guidelines
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -1635,6 +1636,40 @@
             </svg>
           </span>
         </div>
+
+        <br> 
+        <h3 style="margin-top:2rem;">Registration and Pricing</h3>
+        <div class="reg-table-wrap">
+          <table class="reg-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Student / Research Scholar</th>
+                <th>Faculty / Academician</th>
+                <th>Industry Professional</th>
+                <th>Co-Author / Attendee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Category"><strong>Authors from India (INR)</strong></td>
+                <td data-label="Student / Research Scholar">16500</td>
+                <td data-label="Faculty / Academician">12000</td>
+                <td data-label="Industry Professional">12000</td>
+                <td data-label="Co-Author / Attendee">2000</td>
+              </tr>
+              <tr>
+                <td data-label="Category"><strong>Authors from outside India (USD)</strong></td>
+                <td data-label="Student / Research Scholar">170</td>
+                <td data-label="Faculty / Academician">200</td>
+                <td data-label="Industry Professional">200</td>
+                <td data-label="Co-Author / Attendee">65</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="reg-note">Note: Authors would be able to avail an early bird discount of 10% on the above mentioned registration fee if they register before the early bird deadline.</p>
+        </div>
+
       </div>
     </section>
 
@@ -1942,20 +1977,50 @@
       style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
       <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
         <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Paper Submission</h1>
-        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Guidelines and Instructions for Submitting Your Research</p>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Link for Submitting Your Research</p>
       </div>
     </div>
     <section class="section">
       <div class="section-center pub-section">
-        <h3>Article Submission</h3>
+        
+        <section class="section" id="fees-section">
+      <div class="section-center">
+        <div class="fee-band-box reveal">
+          <h2>Paper Submission link</h2>
+          <div class="announced-badge">Under construction</div>
+          <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray-600);"> All submissions shall be handled through the EasyChair conference management system. We are working on it . The Link will be added soon.</p>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: GUIDELINES                           -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="guidelines" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Guidelines</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Important Information for Conference Submission </p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-center pub-section">
+         <h3>Article Submission</h3>
         <p>The submitted articles should not be currently under review by any other conference or journal. All submissions shall be handled through the EasyChair conference management system. Conference solicits high impact, high quality, original and unpublished work related to one of the theme areas.</p>
         <br>
         <h3>Paper Submission Instructions</h3>
         <p>While preparing your manuscript, we recommend to copy paste your content directly into this AIP template. (The template is to be attached in the website)<br>Short papers - 6 to 11 Pages and Long Papers 12-15 Pages</p>
         <br>
-        <h3>Author Resources</h3>
-        <p>To assist authors in preparing manuscripts according to publisher requirements, the following resources will be provided:</p>
-        <ul class="reg-guidelines">
+        <h3>Author Resources</h3> 
+    <p>To assist authors in preparing manuscripts according to publisher requirements, the following resources will be provided: 
+      <a href="author-guidelines.pdf" download="Author_Guidelines.pdf" style="display: inline-block; padding: 6px 12px; margin-left: 10px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 14px;">Author Guidelines</a>
+    </p>
+    <ul class="reg-guidelines">
           <li><span class="reg-tick">✓</span>Checklist – Mandatory compliance checklist for formatting, submission metadata, and ethical declarations.</li>
           <li><span class="reg-tick">✓</span>Manuscript Guidelines – Detailed author instructions covering formatting specifications, page limits, references, figures, and submission requirements.</li>
           <li><span class="reg-tick">✓</span>AIP Word Template – Official Microsoft Word template conforming to AIP proceedings standards.</li>
@@ -1977,35 +2042,6 @@
         <h3>Best Paper Award</h3>
         <p>One paper from each of the listed tracks will be selected as Best Paper. The Best Papers will be announced at culmination of the conference.</p>
         <br>
-        <section class="section" id="fees-section">
-      <div class="section-center">
-        <div class="fee-band-box reveal">
-          <h2>Paper Submission link</h2>
-          <div class="announced-badge">Under construction</div>
-          <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray-600);"> We are working on it . The Link will be added soon.</p>
-        </div>
-      </div>
-    </section>
-      </div>
-    </section>
-  </div>
-
-  <!-- ═══════════════════════════════════════════ -->
-  <!--  PAGE: GUIDELINES                           -->
-  <!-- ═══════════════════════════════════════════ -->
-  <div id="guidelines" class="page-section">
-    <div style="height:4.5rem;"></div>
-    <div
-      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
-      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
-        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Registration Guidelines</h1>
-        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Important Information for Conference Registration</p>
-      </div>
-    </div>
-    <section class="section">
-      <div class="section-center pub-section">
-=======
-        
 
         <h3>Registration Guidelines</h3>
         <ul class="reg-guidelines">
@@ -2849,6 +2885,9 @@
           style="box-shadow: 0 4px 15px rgba(0,0,0,0.04); border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-200); background: #fff; padding: 0.5rem;">
           <table class="downloads-table">
             <thead>
+
+              
+
               <tr>
                 <th
                   style="padding: 1rem; font-size: 0.95rem; background: var(--gray-200); width: 60%; text-align: left;">
@@ -2862,6 +2901,30 @@
               </tr>
             </thead>
             <tbody>
+
+              <tr>
+                <td data-label="Resource / Template Name" style="padding: 1.25rem 1rem;">
+                  <div style="display: flex; align-items: start; gap: 0.75rem;">
+                    <span style="font-size: 1.5rem; line-height: 1;">📝</span>
+                    <div>
+                      <strong style="color: var(--blue9); font-size: 1rem; display: block; margin-bottom: 0.25rem;">Author Guidelines</strong>
+                      <span style="font-size: 0.85rem; color: var(--gray-600); display: block; line-height: 1.4;">Official publisher guidelines describing absolute page limits, margin measurements, font configurations, abstract rules, and indexing details.</span>
+                    </div>
+                  </div>
+                </td>
+                <td data-label="Format" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <span style="background: rgba(242,41,91,0.1); color: var(--pink); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">PDF</span>
+                </td>
+                <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
+                  <a href="author-guidelines.pdf" download="Author_Guidelines.pdf" class="hero-btn" style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
+                    Download
+                    <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="stroke-width: 2.5;">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                  </a>
+                </td>
+              </tr>
+              <!--
               <tr>
                 <td data-label="Resource / Template Name" style="padding: 1.25rem 1rem;">
                   <div style="display: flex; align-items: start; gap: 0.75rem;">
@@ -2881,9 +2944,9 @@
                     style="background: rgba(242,41,91,0.1); color: var(--pink); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">PDF</span>
                 </td>
                 <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
-                  <a href="checklist.pdf" download class="hero-btn"
+                  <a href="#" download class="hero-btn"
                     style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
-                    Download
+                    Coming Soon
                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                       style="stroke-width: 2.5;">
                       <path stroke-linecap="round" stroke-linejoin="round"
@@ -2912,9 +2975,9 @@
                     style="background: rgba(242,41,91,0.1); color: var(--pink); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">PDF</span>
                 </td>
                 <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
-                  <a href="Manuscript_Guidelines.pdf" download class="hero-btn"
+                  <a href="#" download class="hero-btn"
                     style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
-                    Download
+                    Coming Soon
                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                       style="stroke-width: 2.5;">
                       <path stroke-linecap="round" stroke-linejoin="round"
@@ -2942,9 +3005,9 @@
                     style="background: rgba(30,58,138,0.1); color: var(--blue9); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">ZIP</span>
                 </td>
                 <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
-                  <a href="AIP_Word_Template.zip" download class="hero-btn"
+                  <a href="#" download class="hero-btn"
                     style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
-                    Download
+                    Coming Soon
                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                       style="stroke-width: 2.5;">
                       <path stroke-linecap="round" stroke-linejoin="round"
@@ -2972,9 +3035,9 @@
                     style="background: rgba(30,58,138,0.1); color: var(--blue9); padding: 0.3rem 0.8rem; border-radius: 99px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.05em;">ZIP</span>
                 </td>
                 <td data-label="Action" style="text-align: center; padding: 1.25rem 1rem; vertical-align: middle;">
-                  <a href="AIP_Latex_Template.zip" download class="hero-btn"
+                  <a href="#" download class="hero-btn"
                     style="padding: 0.55rem 1.25rem; font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem; text-transform: none; border-radius: 6px; box-shadow: 0 2px 8px rgba(242,41,91,0.2);">
-                    Download
+                    Coming Soon
                     <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                       style="stroke-width: 2.5;">
                       <path stroke-linecap="round" stroke-linejoin="round"
@@ -2982,7 +3045,7 @@
                     </svg>
                   </a>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
