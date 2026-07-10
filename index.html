@@ -1222,7 +1222,9 @@
       <a href="#" onclick="showPage('advisory')" data-page="advisory">Advisory Board</a>
       <a href="#" onclick="showPage('committee')" data-page="committee">Committee</a>
       <a href="#" onclick="showPage('publication')" data-page="publication">Publication</a>
-      <a href="#" onclick="showPage('registration')" data-page="registration">Registration</a>
+      <a href="#" onclick="showPage('submissions')" data-page="submissions">Submissions</a>
+      <a href="#" onclick="showPage('guidelines')" data-page="guidelines">Guidelines</a>
+      
       <a href="#" onclick="showPage('travel-guide')" data-page="travel-guide">Travel Guide</a>
       <a href="#" onclick="showPage('downloads')" data-page="downloads">Downloads</a>
       <a href="#" onclick="showPage('reach-us')" data-page="reach-us">Reach Us</a>
@@ -1240,6 +1242,8 @@
     <a href="#" onclick="showPage('advisory');closeMenu()" data-page="advisory">Advisory Board</a>
     <a href="#" onclick="showPage('committee');closeMenu()" data-page="committee">Committee</a>
     <a href="#" onclick="showPage('publication');closeMenu()" data-page="publication">Publication</a>
+    <a href="#" onclick="showPage('submissions');closeMenu()" data-page="submissions">Submissions</a>
+    <a href="#" onclick="showPage('guidelines');closeMenu()" data-page="guidelines">Guidelines</a>
     <a href="#" onclick="showPage('registration');closeMenu()" data-page="registration">Registration</a>
     <a href="#" onclick="showPage('travel-guide');closeMenu()" data-page="travel-guide">Travel Guide</a>
     <a href="#" onclick="showPage('downloads');closeMenu()" data-page="downloads">Downloads</a>
@@ -1296,8 +1300,14 @@
             SRM IST, Tiruchirappalli &nbsp;·&nbsp; Hybrid Mode
           </div>
         </div>
-        <span class="hero-btn" onclick="showPage('registration')">
+        <span class="hero-btn" onclick="showPage('guidelines')">
           Register
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+        <span class="hero-btn" onclick="showPage('submissions')">
+          Paper Submission
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -1628,16 +1638,8 @@
       </div>
     </section>
 
-    <!-- FEE DETAILS - PRESERVING THE BOX STRUCTURE -->
-    <section class="section" id="fees-section">
-      <div class="section-center">
-        <div class="fee-band-box reveal">
-          <h2>Paper Submission link</h2>
-          <div class="announced-badge">Under construction</div>
-
-        </div>
-      </div>
-    </section>
+    <!-- PAPER SUBMISSION LINK -->
+    
 
 
   </div><!-- end #home page -->
@@ -1896,9 +1898,6 @@
     </div>
     <section class="section">
       <div class="section-center pub-section">
-        <h3>Article Submission</h3>
-        <p>The submitted articles should not be currently under review by any other conference or journal. All submissions shall be handled through the EasyChair conference management system. Conference solicits high impact, high quality, original and unpublished work related to one of the theme areas.</p>
-        <br>
         <h3>Paper Submission Instructions</h3>
         <p>While preparing your manuscript, we recommend to copy paste your content directly into this AIP template. (The template is to be attached in the website)<br>Short papers - 6 to 11 Pages and Long Papers 12-15 Pages</p>
         <br>
@@ -1928,22 +1927,95 @@
         <h3>Best Paper Award</h3>
         <p>One paper from each of the listed tracks will be selected as Best Paper. The Best Papers will be announced at culmination of the conference.</p>
         <br>
+<<<<<<< HEAD
+         </div>
+    </section>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: SUBMISSIONS                          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="submissions" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Paper Submission</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Guidelines and Instructions for Submitting Your Research</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-center pub-section">
+        <h3>Article Submission</h3>
+        <p>The submitted articles should not be currently under review by any other conference or journal. All submissions shall be handled through the EasyChair conference management system. Conference solicits high impact, high quality, original and unpublished work related to one of the theme areas.</p>
+        <br>
+        <h3>Paper Submission Instructions</h3>
+        <p>While preparing your manuscript, we recommend to copy paste your content directly into this AIP template. (The template is to be attached in the website)<br>Short papers - 6 to 11 Pages and Long Papers 12-15 Pages</p>
+        <br>
+        <h3>Author Resources</h3>
+        <p>To assist authors in preparing manuscripts according to publisher requirements, the following resources will be provided:</p>
+        <ul class="reg-guidelines">
+          <li><span class="reg-tick">✓</span>Checklist – Mandatory compliance checklist for formatting, submission metadata, and ethical declarations.</li>
+          <li><span class="reg-tick">✓</span>Manuscript Guidelines – Detailed author instructions covering formatting specifications, page limits, references, figures, and submission requirements.</li>
+          <li><span class="reg-tick">✓</span>AIP Word Template – Official Microsoft Word template conforming to AIP proceedings standards.</li>
+          <li><span class="reg-tick">✓</span>AIP Latex Template – Official Latex template package with style files, bibliography support, and sample documents.</li>
+        </ul>
+        <br>
+        <h3>Review Process</h3>
+        <ul class="reg-guidelines">
+          <li><span class="reg-tick">✓</span>At first, the manuscripts received would be evaluated from the purview of the scope of this conference.</li>
+          <li><span class="reg-tick">✓</span>Screened submissions undergo an initial quality check through Turnitin Software for potential similarity with published literature.</li>
+          <li><span class="reg-tick">✓</span>Subsequently, the manuscripts with a similarity index of less than 5 percent would be sent for single-blind review by three independent referees.</li>
+          <li><span class="reg-tick">✓</span>A consensus of three reviewers would be mandatory for the acceptance of manuscripts.</li>
+          <li><span class="reg-tick">✓</span>One reviewer would not review more than three manuscripts.</li>
+        </ul>
+        <br>
+        <h3>Publication &amp; Indexing</h3>
+        <p>The articles submitted to the International Conference on Generative AI Applications in Science and Technology will be subjected to double-blind peer review by the panel of experts. All accepted and registered papers will be included in the conference proceedings that will be published by AIP. (Waiting for approval)</p>
+        <br>
+        <h3>Best Paper Award</h3>
+        <p>One paper from each of the listed tracks will be selected as Best Paper. The Best Papers will be announced at culmination of the conference.</p>
+        <br>
+        <section class="section" id="fees-section">
+      <div class="section-center">
+        <div class="fee-band-box reveal">
+          <h2>Paper Submission link</h2>
+          <div class="announced-badge">Under construction</div>
+          <p style="margin-top: 1rem; font-size: 0.95rem; color: var(--gray-600);"> We are working on it . The Link will be added soon.</p>
+        </div>
+      </div>
+    </section>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  PAGE: GUIDELINES                           -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div id="guidelines" class="page-section">
+    <div style="height:4.5rem;"></div>
+    <div
+      style="background: linear-gradient(112deg, var(--navy2) 28%, var(--pink) 100%); min-height:25vh; display:flex; align-items:center; justify-content:center;">
+      <div style="text-align:center; color:#fff; padding:2rem 1.5rem;">
+        <h1 style="font-size:clamp(1.4rem,4vw,2.5rem); font-weight:700; font-family:var(--font-head);">Registration Guidelines</h1>
+        <p style="margin-top:.75rem; font-size:1rem; opacity:.85;">Important Information for Conference Registration</p>
+      </div>
+    </div>
+    <section class="section">
+      <div class="section-center pub-section">
+=======
         
+>>>>>>> 347d27a3b7c7643d8ae3734c1c3307b897c816c9
         <h3>Registration Guidelines</h3>
         <ul class="reg-guidelines">
-          <li><span class="reg-tick">✓</span>For each accepted paper, at least one of the authors must register for the
-            conference.</li>
-          <li><span class="reg-tick">✓</span>One registration in the Student category allows one paper
-            presentation/publication.</li>
-          <li><span class="reg-tick">✓</span>One registration in the Faculty category allows two paper
-            presentations/publications (provided both have been accepted upon peer review).</li>
-          <li><span class="reg-tick">✓</span>Registration in the Author's Registration Category is mandatory for the
-            presentation of the paper in the conference.</li>
+          <li><span class="reg-tick">✓</span>For each accepted paper, at least one of the authors must register for the conference.</li>
+          <li><span class="reg-tick">✓</span>One registration in the Student category allows one paper presentation/publication.</li>
+          <li><span class="reg-tick">✓</span>One registration in the Faculty category allows two paper presentations/publications (provided both have been accepted upon peer review).</li>
+          <li><span class="reg-tick">✓</span>Registration in the Author's Registration Category is mandatory for the presentation of the paper in the conference.</li>
           <li><span class="reg-tick">✓</span>Included: paper in conference proceedings.</li>
-          <li><span class="reg-tick">✓</span>Other authors may register as co-authors if at least one author has already
-            registered in the author category.</li>
+          <li><span class="reg-tick">✓</span>Other authors may register as co-authors if at least one author has already registered in the author category.</li>
         </ul>
-
         <br>
         <h3 style="margin-top:2rem;">Registration and Pricing</h3>
         <div class="reg-table-wrap">
@@ -1974,8 +2046,7 @@
               </tr>
             </tbody>
           </table>
-          <p class="reg-note">Note: Authors would be able to avail an early bird discount of 10% on the above mentioned
-            registration fee if they register before the early bird deadline.</p>
+          <p class="reg-note">Note: Authors would be able to avail an early bird discount of 10% on the above mentioned registration fee if they register before the early bird deadline.</p>
         </div>
       </div>
     </section>
@@ -2975,7 +3046,7 @@
               <h4 style="color: var(--blue9); margin-bottom: 1rem;">Day 1 Conference (15th April 2027)</h4>
               <ul style="list-style: none; padding: 0; font-size: 0.9rem; line-height: 1.8;">
                 <li>09:30am – 10:00am: Inauguration</li>
-                <li>10:00am – 10:45am: Keynote Seminar</li>
+                <li>10:00am �� 10:45am: Keynote Seminar</li>
                 <li>10:45am – 11:00am: Session Break</li>
                 <li>11:00am – 01:00pm: Technical Presentation I (Parallel 06 Sessions)</li>
                 <li>01:00pm – 01:40pm: Lunch Break</li>
@@ -3050,9 +3121,9 @@
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#"
-              onclick="showPage('home');document.getElementById('callforpapers').scrollIntoView({behavior:'smooth'})">›
+              onclick="showPage('submissions')">›
               Call for Papers</a></li>
-          <li><a href="#" onclick="showPage('registration')">› Registration Guidelines</a></li>
+          <li><a href="#" onclick="showPage('guidelines')">› Registration Guidelines</a></li>
           <li><a href="#" onclick="showPage('registration')">› Online Registration</a></li>
           <li><a href="#" onclick="showPage('travel-guide')">› Travel Guide</a></li>
           <li><a href="#" onclick="showPage('downloads')">› Downloads</a></li>
