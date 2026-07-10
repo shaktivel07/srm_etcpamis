@@ -178,10 +178,7 @@ Mr. S. Niranjan, Co-Chairman, SRM Group of Educational Institutions (Ramapuram &
 
 Chief Patron:
 Dr. Md. Sameeruddin Khan, Pro Vice-Chancellor, SRM Group of Educational Institutions, Trichy Campus
-Dr. N. Malmurugan, Director, SRM Group of Educational Institutions, Tiruchirappalli Campus
-
-Patron:
-Dr. R. Jagadeesh Kannan, Dean, Faculty of Engineering and Technology, SRM Institute of Science and Technology, Tiruchirappalli Campus
+Dr. N. Sethuraman, Chief Director, SRM Group of Educational Institutions, Tiruchirappalli Campus
 
 Conference Chair:
 Dr. S. Kanaga Suba Raja, Professor and Head, Department of Computer Science and Engineering, SRM Institute of Science and Technology, Tiruchirappalli Campus
@@ -359,8 +356,13 @@ The submitted articles should not be currently under review by any other confere
 
 Paper Submission Instructions:
 While preparing your manuscript, we recommend to copy paste your content directly into this AIP template. (The template is to be attached in the website)
-Short papers - 9 to 11 Pages and Long Papers 12-15 Pages 
-
+Short papers - 6 to 11 Pages and Long Papers 12-15 Pages 
+Author Resources
+To assist authors in preparing manuscripts according to publisher requirements, the following resources will be provided:
+•	Checklist – Mandatory compliance checklist for formatting, submission metadata, and ethical declarations.
+•	Manuscript Guidelines – Detailed author instructions covering formatting specifications, page limits, references, figures, and submission requirements.
+•	AIP Word Template – Official Microsoft Word template conforming to AIP proceedings standards.
+•	AIP Latex Template – Official Latex template package with style files, bibliography support, and sample documents.
 Review Process: 
 a) At first, the manuscripts received would be evaluated from the purview of the scope of this conference.
 b) Screened submissions undergo an initial quality check through Turnitin Software for potential similarity with published literature.
@@ -435,7 +437,6 @@ First Day Technical Sessions Closed	09.30am – 10.10am Keynote Seminar
 (Parallel 06 Sessions)
 04.10pm – 04.40pm Valedictory Function
 Second Day Technical Session Closed
-
 
 
 
